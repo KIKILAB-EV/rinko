@@ -1,0 +1,2908 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="531.39874"
+   height="365.15012"
+   id="svg71"
+   sodipodi:docname="regeneration_circuit.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <sodipodi:namedview
+     id="namedview71"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.7239733"
+     inkscape:cx="283.06702"
+     inkscape:cy="149.94431"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g71" />
+  <xhtml:style>
+        
+ .M athJax_Hover_Frame {
+ border-radius: .25em;
+
+        -webkit-border-radius: .25em;
+ -moz-border-radius: .25em;
+
+        -khtml-border-radius: .25em;
+ box-shadow: 0px 0px 15px #83A;
+
+        -webkit-box-shadow: 0px 0px 15px #83A;
+ -moz-box-shadow: 0px 0px
+        15px #83A;
+ -khtml-box-shadow: 0px 0px 15px #83A;
+ border: 1px
+        solid #A6D ! important;
+ display: inline-block;
+ position:
+        absolute
+ }
+
+ .MathJax_Menu_Button .MathJax_Hover_Arrow {
+
+        position: absolute;
+ cursor: pointer;
+ display: inline-block;
+
+        border: 2px solid #AAA;
+ border-radius: 4px;
+
+        -webkit-border-radius: 4px;
+ -moz-border-radius: 4px;
+
+        -khtml-border-radius: 4px;
+ font-family: 'Courier New',
+        Courier;
+ font-size: 9px;
+ color: #F0F0F0
+ }
+
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+ display: block;
+
+        background-color: #AAA;
+ border: 1px solid;
+ border-radius:
+        3px;
+ line-height: 0;
+ padding: 4px
+ }
+
+
+        .MathJax_Hover_Arrow:hover {
+ color: white !important;
+ border:
+        2px solid #CCC !important
+ }
+
+ .MathJax_Hover_Arrow:hover
+        span {
+ background-color: #CCC !important
+ }
+
+
+
+        #MathJax_About {
+ position: fixed;
+ left: 50%;
+ width:
+        auto;
+ text-align: center;
+ border: 3px outset;
+ padding:
+        1em 2em;
+ background-color: #DDDDDD;
+ color: black;
+
+        cursor: default;
+ font-family: message-box;
+ font-size: 120%;
+
+        font-style: normal;
+ text-indent: 0;
+ text-transform: none;
+
+        line-height: normal;
+ letter-spacing: normal;
+ word-spacing:
+        normal;
+ word-wrap: normal;
+ white-space: nowrap;
+ float:
+        none;
+ z-index: 201;
+ border-radius: 15px;
+
+        -webkit-border-radius: 15px;
+ -moz-border-radius: 15px;
+
+        -khtml-border-radius: 15px;
+ box-shadow: 0px 10px 20px #808080;
+
+        -webkit-box-shadow: 0px 10px 20px #808080;
+ -moz-box-shadow: 0px
+        10px 20px #808080;
+ -khtml-box-shadow: 0px 10px 20px #808080;
+
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color='gray', Positive='true')
+ }
+
+
+        #MathJax_About.MathJax_MousePost {
+ outline: none
+ }
+
+
+        .MathJax_Menu {
+ position: absolute;
+ background-color: white;
+
+        color: black;
+ width: auto;
+ padding: 2px;
+ border: 1px
+        solid #CCCCCC;
+ margin: 0;
+ cursor: default;
+ font: menu;
+
+        text-align: left;
+ text-indent: 0;
+ text-transform: none;
+
+        line-height: normal;
+ letter-spacing: normal;
+ word-spacing:
+        normal;
+ word-wrap: normal;
+ white-space: nowrap;
+ float:
+        none;
+ z-index: 201;
+ box-shadow: 0px 10px 20px #808080;
+
+        -webkit-box-shadow: 0px 10px 20px #808080;
+ -moz-box-shadow: 0px
+        10px 20px #808080;
+ -khtml-box-shadow: 0px 10px 20px #808080;
+
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color='gray', Positive='true')
+ }
+
+
+        .MathJax_MenuItem {
+ padding: 2px 2em;
+ background: transparent
+
+        }
+
+ .MathJax_MenuArrow {
+ position: absolute;
+ right:
+        .5em;
+ padding-top: .25em;
+ color: #666666;
+ font-size:
+        .75em
+ }
+
+ .MathJax_MenuActive .MathJax_MenuArrow {
+
+        color: white
+ }
+
+ .MathJax_MenuArrow.RTL {
+ left: .5em;
+
+        right: auto
+ }
+
+ .MathJax_MenuCheck {
+ position:
+        absolute;
+ left: .7em
+ }
+
+ .MathJax_MenuCheck.RTL {
+
+        right: .7em;
+ left: auto
+ }
+
+ .MathJax_MenuRadioCheck {
+
+        position: absolute;
+ left: 1em
+ }
+
+
+        .MathJax_MenuRadioCheck.RTL {
+ right: 1em;
+ left: auto
+ }
+
+
+        .MathJax_MenuLabel {
+ padding: 2px 2em 4px 1.33em;
+ font-style:
+        italic
+ }
+
+ .MathJax_MenuRule {
+ border-top: 1px solid
+        #CCCCCC;
+ margin: 4px 1px 0px
+ }
+
+
+        .MathJax_MenuDisabled {
+ color: GrayText
+ }
+
+
+        .MathJax_MenuActive {
+ background-color: Highlight;
+ color:
+        HighlightText
+ }
+
+ .MathJax_MenuDisabled:focus,
+        .MathJax_MenuLabel:focus {
+ background-color: #E8E8E8
+ }
+
+
+        .MathJax_ContextMenu:focus {
+ outline: none
+ }
+
+
+        .MathJax_ContextMenu .MathJax_MenuItem:focus {
+ outline: none
+
+        }
+
+ #MathJax_AboutClose {
+ top: .2em;
+ right: .2em
+
+        }
+
+ .MathJax_Menu .MathJax_MenuClose {
+ top: -10px;
+
+        left: -10px
+ }
+
+ .MathJax_MenuClose {
+ position:
+        absolute;
+ cursor: pointer;
+ display: inline-block;
+
+        border: 2px solid #AAA;
+ border-radius: 18px;
+
+        -webkit-border-radius: 18px;
+ -moz-border-radius: 18px;
+
+        -khtml-border-radius: 18px;
+ font-family: 'Courier New',
+        Courier;
+ font-size: 24px;
+ color: #F0F0F0
+ }
+
+
+        .MathJax_MenuClose span {
+ display: block;
+ background-color:
+        #AAA;
+ border: 1.5px solid;
+ border-radius: 18px;
+
+        -webkit-border-radius: 18px;
+ -moz-border-radius: 18px;
+
+        -khtml-border-radius: 18px;
+ line-height: 0;
+ padding: 8px 0
+        6px
+ }
+
+ .MathJax_MenuClose:hover {
+ color: white
+        !important;
+ border: 2px solid #CCC !important
+ }
+
+
+        .MathJax_MenuClose:hover span {
+ background-color: #CCC !important
+
+        }
+
+ .MathJax_MenuClose:hover:focus {
+ outline: none
+ }
+
+
+        .MathJax_Preview .MJXf-math {
+ color: inherit !important
+ }
+
+
+        .MJX_Assistive_MathML {
+ position: absolute !important;
+ top:
+        0;
+ left: 0;
+ clip: rect(1px, 1px, 1px, 1px);
+ padding: 1px
+        0 0 0 !important;
+ border: 0 !important;
+ height: 1px
+        !important;
+ width: 1px !important;
+ overflow: hidden
+        !important;
+ display: block !important;
+ -webkit-touch-callout:
+        none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+
+        -moz-user-select: none;
+ -ms-user-select: none;
+ user-select:
+        none
+ }
+
+ .MJX_Assistive_MathML.MJX_Assistive_MathML_Block
+        {
+ width: 100% !important
+ }
+
+ #MathJax_Zoom {
+
+        position: absolute;
+ background-color: #F0F0F0;
+ overflow:
+        auto;
+ display: block;
+ z-index: 301;
+ padding: .5em;
+
+        border: 1px solid black;
+ margin: 0;
+ font-weight: normal;
+
+        font-style: normal;
+ text-align: left;
+ text-indent: 0;
+
+        text-transform: none;
+ line-height: normal;
+ letter-spacing:
+        normal;
+ word-spacing: normal;
+ word-wrap: normal;
+
+        white-space: nowrap;
+ float: none;
+ -webkit-box-sizing:
+        content-box;
+ -moz-box-sizing: content-box;
+ box-sizing:
+        content-box;
+ box-shadow: 5px 5px 15px #AAAAAA;
+
+        -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+ -moz-box-shadow: 5px 5px
+        15px #AAAAAA;
+ -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2,
+        Color='gray', Positive='true')
+ }
+
+
+        #MathJax_ZoomOverlay {
+ position: absolute;
+ left: 0;
+ top:
+        0;
+ z-index: 300;
+ display: inline-block;
+ width: 100%;
+
+        height: 100%;
+ border: 0;
+ padding: 0;
+ margin: 0;
+
+        background-color: white;
+ opacity: 0;
+ filter: alpha(opacity=0)
+
+        }
+
+ #MathJax_ZoomFrame {
+ position: relative;
+ display:
+        inline-block;
+ height: 0;
+ width: 0
+ }
+
+
+        #MathJax_ZoomEventTrap {
+ position: absolute;
+ left: 0;
+
+        top: 0;
+ z-index: 302;
+ display: inline-block;
+ border: 0;
+
+        padding: 0;
+ margin: 0;
+ background-color: white;
+ opacity:
+        0;
+ filter: alpha(opacity=0)
+ }
+
+ .MathJax_Preview {
+
+        color: #888
+ }
+
+ #MathJax_Message {
+ position: fixed;
+
+        left: 1em;
+ bottom: 1.5em;
+ background-color: #E6E6E6;
+
+        border: 1px solid #959595;
+ margin: 0px;
+ padding: 2px 8px;
+
+        z-index: 102;
+ color: black;
+ font-size: 80%;
+ width: auto;
+
+        white-space: nowrap
+ }
+
+ #MathJax_MSIE_Frame {
+
+        position: absolute;
+ top: 0;
+ left: 0;
+ width: 0px;
+
+        z-index: 101;
+ border: 0px;
+ margin: 0px;
+ padding: 0px
+
+        }
+
+ .MathJax_Error {
+ color: #CC0000;
+ font-style:
+        italic
+ }
+
+ .MJXp-script {
+ font-size: .8em
+ }
+
+
+        .MJXp-right {
+ -webkit-transform-origin: right;
+
+        -moz-transform-origin: right;
+ -ms-transform-origin: right;
+
+        -o-transform-origin: right;
+ transform-origin: right
+ }
+
+
+        .MJXp-bold {
+ font-weight: bold
+ }
+
+ .MJXp-italic {
+
+        font-style: italic
+ }
+
+ .MJXp-scr {
+ font-family:
+        MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+
+        }
+
+ .MJXp-frak {
+ font-family: MathJax_Fraktur, 'Times
+        New Roman', Times, STIXGeneral, serif
+ }
+
+ .MJXp-sf {
+
+        font-family: MathJax_SansSerif, 'Times New Roman', Times,
+        STIXGeneral, serif
+ }
+
+ .MJXp-cal {
+ font-family:
+        MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral,
+        serif
+ }
+
+ .MJXp-mono {
+ font-family:
+        MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral,
+        serif
+ }
+
+ .MJXp-largeop {
+ font-size: 150%
+ }
+
+
+        .MJXp-largeop.MJXp-int {
+ vertical-align: -.2em
+ }
+
+
+        .MJXp-math {
+ display: inline-block;
+ line-height: 1.2;
+
+        text-indent: 0;
+ font-family: 'Times New Roman', Times,
+        STIXGeneral, serif;
+ white-space: nowrap;
+ border-collapse:
+        collapse
+ }
+
+ .MJXp-display {
+ display: block;
+
+        text-align: center;
+ margin: 1em 0
+ }
+
+ .MJXp-math span
+        {
+ display: inline-block
+ }
+
+ .MJXp-box {
+ display:
+        block !important;
+ text-align: center
+ }
+
+
+        .MJXp-box:after {
+ content: &quot; &quot;
+ }
+
+ .MJXp-rule {
+
+        display: block !important;
+ margin-top: .1em
+ }
+
+
+        .MJXp-char {
+ display: block !important
+ }
+
+ .MJXp-mo {
+
+        margin: 0 .15em
+ }
+
+ .MJXp-mfrac {
+ margin: 0 .125em;
+
+        vertical-align: .25em
+ }
+
+ .MJXp-denom {
+ display:
+        inline-table !important;
+ width: 100%
+ }
+
+ .MJXp-denom&gt;
+        * {
+ display: table-row !important
+ }
+
+ .MJXp-surd {
+
+        vertical-align: top
+ }
+
+ .MJXp-surd&gt; * {
+ display:
+        block !important
+ }
+
+ .MJXp-script-box&gt; * {
+
+        display: table !important;
+ height: 50%
+ }
+
+
+        .MJXp-script-box&gt; *&gt; * {
+ display: table-cell !important;
+
+        vertical-align: top
+ }
+
+ .MJXp-script-box&gt; *:last-child&gt;
+        * {
+ vertical-align: bottom
+ }
+
+ .MJXp-script-box&gt; *&gt;
+        *&gt; * {
+ display: block !important
+ }
+
+
+        .MJXp-mphantom {
+ visibility: hidden
+ }
+
+
+        .MJXp-munderover, .MJXp-munder {
+ display: inline-table !important
+
+        }
+
+ .MJXp-over {
+ display: inline-block !important;
+
+        text-align: center
+ }
+
+ .MJXp-over&gt; * {
+ display:
+        block !important
+ }
+
+ .MJXp-munderover&gt; *, .MJXp-munder&gt;
+        * {
+ display: table-row !important
+ }
+
+ .MJXp-mtable {
+
+        vertical-align: .25em;
+ margin: 0 .125em
+ }
+
+
+        .MJXp-mtable&gt; * {
+ display: inline-table !important;
+
+        vertical-align: middle
+ }
+
+ .MJXp-mtr {
+ display:
+        table-row !important
+ }
+
+ .MJXp-mtd {
+ display:
+        table-cell !important;
+ text-align: center;
+ padding: .5em 0 0
+        .5em
+ }
+
+ .MJXp-mtr&gt; .MJXp-mtd:first-child {
+
+        padding-left: 0
+ }
+
+ .MJXp-mtr:first-child&gt; .MJXp-mtd {
+
+        padding-top: 0
+ }
+
+ .MJXp-mlabeledtr {
+ display:
+        table-row !important
+ }
+
+ .MJXp-mlabeledtr&gt;
+        .MJXp-mtd:first-child {
+ padding-left: 0
+ }
+
+
+        .MJXp-mlabeledtr:first-child&gt; .MJXp-mtd {
+ padding-top: 0
+ }
+
+
+        .MJXp-merror {
+ background-color: #FFFF88;
+ color: #CC0000;
+
+        border: 1px solid #CC0000;
+ padding: 1px 3px;
+ font-style:
+        normal;
+ font-size: 90%
+ }
+
+ .MJXp-scale0 {
+
+        -webkit-transform: scaleX(.0);
+ -moz-transform: scaleX(.0);
+
+        -ms-transform: scaleX(.0);
+ -o-transform: scaleX(.0);
+
+        transform: scaleX(.0)
+ }
+
+ .MJXp-scale1 {
+
+        -webkit-transform: scaleX(.1);
+ -moz-transform: scaleX(.1);
+
+        -ms-transform: scaleX(.1);
+ -o-transform: scaleX(.1);
+
+        transform: scaleX(.1)
+ }
+
+ .MJXp-scale2 {
+
+        -webkit-transform: scaleX(.2);
+ -moz-transform: scaleX(.2);
+
+        -ms-transform: scaleX(.2);
+ -o-transform: scaleX(.2);
+
+        transform: scaleX(.2)
+ }
+
+ .MJXp-scale3 {
+
+        -webkit-transform: scaleX(.3);
+ -moz-transform: scaleX(.3);
+
+        -ms-transform: scaleX(.3);
+ -o-transform: scaleX(.3);
+
+        transform: scaleX(.3)
+ }
+
+ .MJXp-scale4 {
+
+        -webkit-transform: scaleX(.4);
+ -moz-transform: scaleX(.4);
+
+        -ms-transform: scaleX(.4);
+ -o-transform: scaleX(.4);
+
+        transform: scaleX(.4)
+ }
+
+ .MJXp-scale5 {
+
+        -webkit-transform: scaleX(.5);
+ -moz-transform: scaleX(.5);
+
+        -ms-transform: scaleX(.5);
+ -o-transform: scaleX(.5);
+
+        transform: scaleX(.5)
+ }
+
+ .MJXp-scale6 {
+
+        -webkit-transform: scaleX(.6);
+ -moz-transform: scaleX(.6);
+
+        -ms-transform: scaleX(.6);
+ -o-transform: scaleX(.6);
+
+        transform: scaleX(.6)
+ }
+
+ .MJXp-scale7 {
+
+        -webkit-transform: scaleX(.7);
+ -moz-transform: scaleX(.7);
+
+        -ms-transform: scaleX(.7);
+ -o-transform: scaleX(.7);
+
+        transform: scaleX(.7)
+ }
+
+ .MJXp-scale8 {
+
+        -webkit-transform: scaleX(.8);
+ -moz-transform: scaleX(.8);
+
+        -ms-transform: scaleX(.8);
+ -o-transform: scaleX(.8);
+
+        transform: scaleX(.8)
+ }
+
+ .MJXp-scale9 {
+
+        -webkit-transform: scaleX(.9);
+ -moz-transform: scaleX(.9);
+
+        -ms-transform: scaleX(.9);
+ -o-transform: scaleX(.9);
+
+        transform: scaleX(.9)
+ }
+
+ .MathJax_PHTML .noError {
+
+        vertical-align: ;
+ font-size: 90%;
+ text-align: left;
+
+        color: black;
+ padding: 1px 3px;
+ border: 1px solid
+ }
+
+
+        .mjx-chtml {
+ display: inline-block;
+ line-height: 0;
+
+        text-indent: 0;
+ text-align: left;
+ text-transform: none;
+
+        font-style: normal;
+ font-weight: normal;
+ font-size: 100%;
+
+        font-size-adjust: none;
+ letter-spacing: normal;
+ word-wrap:
+        normal;
+ word-spacing: normal;
+ white-space: nowrap;
+
+        float: none;
+ direction: ltr;
+ max-width: none;
+
+        max-height: none;
+ min-width: 0;
+ min-height: 0;
+ border:
+        0;
+ margin: 0;
+ padding: 1px 0
+ }
+
+ .MJXc-display {
+
+        display: block;
+ text-align: center;
+ margin: 1em 0;
+
+        padding: 0
+ }
+
+ .mjx-chtml[tabindex]:focus, body :focus
+        .mjx-chtml[tabindex] {
+ display: inline-table
+ }
+
+
+        .mjx-full-width {
+ text-align: center;
+ display: table-cell
+        !important;
+ width: 10000em
+ }
+
+ .mjx-math {
+
+        display: inline-block;
+ border-collapse: separate;
+
+        border-spacing: 0
+ }
+
+ .mjx-math * {
+ display:
+        inline-block;
+ -webkit-box-sizing: content-box !important;
+
+        -moz-box-sizing: content-box !important;
+ box-sizing: content-box
+        !important;
+ text-align: left
+ }
+
+ .mjx-numerator {
+
+        display: block;
+ text-align: center
+ }
+
+
+        .mjx-denominator {
+ display: block;
+ text-align: center
+ }
+
+
+        .MJXc-stacked {
+ height: 0;
+ position: relative
+ }
+
+
+        .MJXc-stacked&gt; * {
+ position: absolute
+ }
+
+
+        .MJXc-bevelled&gt; * {
+ display: inline-block
+ }
+
+
+        .mjx-stack {
+ display: inline-block
+ }
+
+ .mjx-op {
+
+        display: block
+ }
+
+ .mjx-under {
+ display: table-cell
+
+        }
+
+ .mjx-over {
+ display: block
+ }
+
+ .mjx-over&gt;
+        * {
+ padding-left: 0px !important;
+ padding-right: 0px
+        !important
+ }
+
+ .mjx-under&gt; * {
+ padding-left: 0px
+        !important;
+ padding-right: 0px !important
+ }
+
+
+        .mjx-stack&gt; .mjx-sup {
+ display: block
+ }
+
+
+        .mjx-stack&gt; .mjx-sub {
+ display: block
+ }
+
+
+        .mjx-prestack&gt; .mjx-presup {
+ display: block
+ }
+
+
+        .mjx-prestack&gt; .mjx-presub {
+ display: block
+ }
+
+
+        .mjx-delim-h&gt; .mjx-char {
+ display: inline-block
+ }
+
+
+        .mjx-surd {
+ vertical-align: top
+ }
+
+ .mjx-mphantom * {
+
+        visibility: hidden
+ }
+
+ .mjx-merror {
+
+        background-color: #FFFF88;
+ color: #CC0000;
+ border: 1px solid
+        #CC0000;
+ padding: 2px 3px;
+ font-style: normal;
+
+        font-size: 90%
+ }
+
+ .mjx-annotation-xml {
+ line-height:
+        normal
+ }
+
+ .mjx-menclose&gt; svg {
+ fill: none;
+
+        stroke: currentColor
+ }
+
+ .mjx-mtr {
+ display:
+        table-row
+ }
+
+ .mjx-mlabeledtr {
+ display: table-row
+
+        }
+
+ .mjx-mtd {
+ display: table-cell;
+ text-align:
+        center
+ }
+
+ .mjx-label {
+ display: table-row
+ }
+
+
+        .mjx-box {
+ display: inline-block
+ }
+
+ .mjx-block {
+
+        display: block
+ }
+
+ .mjx-span {
+ display: inline
+ }
+
+
+        .mjx-char {
+ display: block;
+&lt;!-- white-space: pre--&gt;&lt;!--
+        Remove this because it keeps white spaces in exported SVGs, which makes
+        the texts very long --&gt;
+ }
+
+ .mjx-itable {
+ display:
+        inline-table;
+ width: auto
+ }
+
+ .mjx-row {
+
+        display: table-row
+ }
+
+ .mjx-cell {
+ display:
+        table-cell
+ }
+
+ .mjx-table {
+ display: table;
+
+        width: 100%
+ }
+
+ .mjx-line {
+ display: block;
+
+        height: 0
+ }
+
+ .mjx-strut {
+ width: 0;
+
+        padding-top: 1em
+ }
+
+ .mjx-vsize {
+ width: 0
+ }
+
+
+        .MJXc-space1 {
+ margin-left: .167em
+ }
+
+ .MJXc-space2 {
+
+        margin-left: .222em
+ }
+
+ .MJXc-space3 {
+ margin-left:
+        .278em
+ }
+
+ .mjx-chartest {
+ display: block;
+
+        visibility: hidden;
+ position: absolute;
+ top: 0;
+
+        line-height: normal;
+ font-size: 500%
+ }
+
+
+        .mjx-chartest .mjx-char {
+ display: inline
+ }
+
+
+        .mjx-chartest .mjx-box {
+ padding-top: 1000px
+ }
+
+
+        .MJXc-processing {
+ visibility: hidden;
+ position: fixed;
+
+        width: 0;
+ height: 0;
+ overflow: hidden
+ }
+
+
+        .MJXc-processed {
+ display: none
+ }
+
+ .mjx-test {
+
+        font-style: normal;
+ font-weight: normal;
+ font-size: 100%;
+
+        font-size-adjust: none;
+ text-indent: 0;
+ text-transform: none;
+
+        letter-spacing: normal;
+ word-spacing: normal;
+ overflow:
+        hidden;
+ height: 1px
+ }
+
+ .mjx-test.mjx-test-display {
+
+        display: table !important
+ }
+
+ .mjx-test.mjx-test-inline {
+
+        display: inline !important;
+ margin-right: -1px
+ }
+
+
+        .mjx-test.mjx-test-default {
+ display: block !important;
+
+        clear: both
+ }
+
+ .mjx-ex-box {
+ display: inline-block
+        !important;
+ position: absolute;
+ overflow: hidden;
+
+        min-height: 0;
+ max-height: none;
+ padding: 0;
+ border: 0;
+
+        margin: 0;
+ width: 1px;
+ height: 60ex
+ }
+
+
+        .mjx-test-inline .mjx-left-box {
+ display: inline-block;
+
+        width: 0;
+ float: left
+ }
+
+ .mjx-test-inline
+        .mjx-right-box {
+ display: inline-block;
+ width: 0;
+ float:
+        right
+ }
+
+ .mjx-test-display .mjx-right-box {
+ display:
+        table-cell !important;
+ width: 10000em !important;
+ min-width:
+        0;
+ max-width: none;
+ padding: 0;
+ border: 0;
+ margin:
+        0
+ }
+
+ #MathJax_CHTML_Tooltip {
+ background-color:
+        InfoBackground;
+ color: InfoText;
+ border: 1px solid black;
+
+        box-shadow: 2px 2px 5px #AAAAAA;
+ -webkit-box-shadow: 2px 2px 5px
+        #AAAAAA;
+ -moz-box-shadow: 2px 2px 5px #AAAAAA;
+
+        -khtml-box-shadow: 2px 2px 5px #AAAAAA;
+ padding: 3px 4px;
+
+        z-index: 401;
+ position: absolute;
+ left: 0;
+ top: 0;
+
+        width: auto;
+ height: auto;
+ display: none
+ }
+
+
+        .mjx-chtml .mjx-noError {
+ line-height: 1.2;
+ vertical-align: ;
+
+        font-size: 90%;
+ text-align: left;
+ color: black;
+ padding:
+        1px 3px;
+ border: 1px solid
+ }
+
+ .MJXc-TeX-unknown-R {
+
+        font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS',
+        serif;
+ font-style: normal;
+ font-weight: normal
+ }
+
+
+        .MJXc-TeX-unknown-I {
+ font-family: STIXGeneral, 'Cambria Math',
+        'Arial Unicode MS', serif;
+ font-style: italic;
+
+        font-weight: normal
+ }
+
+ .MJXc-TeX-unknown-B {
+
+        font-family: STIXGeneral, 'Cambria Math', 'Arial Unicode MS',
+        serif;
+ font-style: normal;
+ font-weight: bold
+ }
+
+
+        .MJXc-TeX-unknown-BI {
+ font-family: STIXGeneral, 'Cambria Math',
+        'Arial Unicode MS', serif;
+ font-style: italic;
+
+        font-weight: bold
+ }
+
+ .MJXc-TeX-ams-R {
+ font-family:
+        MJXc-TeX-ams-R, MJXc-TeX-ams-Rw
+ }
+
+ .MJXc-TeX-cal-B {
+
+        font-family: MJXc-TeX-cal-B, MJXc-TeX-cal-Bx, MJXc-TeX-cal-Bw
+ }
+
+
+        .MJXc-TeX-frak-R {
+ font-family: MJXc-TeX-frak-R, MJXc-TeX-frak-Rw
+
+        }
+
+ .MJXc-TeX-frak-B {
+ font-family: MJXc-TeX-frak-B,
+        MJXc-TeX-frak-Bx, MJXc-TeX-frak-Bw
+ }
+
+ .MJXc-TeX-math-BI {
+
+        font-family: MJXc-TeX-math-BI, MJXc-TeX-math-BIx, MJXc-TeX-math-BIw
+
+        }
+
+ .MJXc-TeX-sans-R {
+ font-family: MJXc-TeX-sans-R,
+        MJXc-TeX-sans-Rw
+ }
+
+ .MJXc-TeX-sans-B {
+ font-family:
+        MJXc-TeX-sans-B, MJXc-TeX-sans-Bx, MJXc-TeX-sans-Bw
+ }
+
+
+        .MJXc-TeX-sans-I {
+ font-family: MJXc-TeX-sans-I, MJXc-TeX-sans-Ix,
+        MJXc-TeX-sans-Iw
+ }
+
+ .MJXc-TeX-script-R {
+
+        font-family: MJXc-TeX-script-R, MJXc-TeX-script-Rw
+ }
+
+
+        .MJXc-TeX-type-R {
+ font-family: MJXc-TeX-type-R, MJXc-TeX-type-Rw
+
+        }
+
+ .MJXc-TeX-cal-R {
+ font-family: MJXc-TeX-cal-R,
+        MJXc-TeX-cal-Rw
+ }
+
+ .MJXc-TeX-main-B {
+ font-family:
+        MJXc-TeX-main-B, MJXc-TeX-main-Bx, MJXc-TeX-main-Bw
+ }
+
+
+        .MJXc-TeX-main-I {
+ font-family: MJXc-TeX-main-I, MJXc-TeX-main-Ix,
+        MJXc-TeX-main-Iw
+ }
+
+ .MJXc-TeX-main-R {
+ font-family:
+        MJXc-TeX-main-R, MJXc-TeX-main-Rw
+ }
+
+ .MJXc-TeX-math-I {
+
+        font-family: MJXc-TeX-math-I, MJXc-TeX-math-Ix, MJXc-TeX-math-Iw
+ }
+
+
+        .MJXc-TeX-size1-R {
+ font-family: MJXc-TeX-size1-R,
+        MJXc-TeX-size1-Rw
+ }
+
+ .MJXc-TeX-size2-R {
+
+        font-family: MJXc-TeX-size2-R, MJXc-TeX-size2-Rw
+ }
+
+
+        .MJXc-TeX-size3-R {
+ font-family: MJXc-TeX-size3-R,
+        MJXc-TeX-size3-Rw
+ }
+
+ .MJXc-TeX-size4-R {
+
+        font-family: MJXc-TeX-size4-R, MJXc-TeX-size4-Rw
+ }
+
+
+        .MJXc-TeX-vec-R {
+ font-family: MJXc-TeX-vec-R, MJXc-TeX-vec-Rw
+
+        }
+
+ .MJXc-TeX-vec-B {
+ font-family: MJXc-TeX-vec-B,
+        MJXc-TeX-vec-Bx, MJXc-TeX-vec-Bw
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-ams-R;
+ src: local('MathJax_AMS'),
+        local('MathJax_AMS-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-ams-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-cal-B;
+ src: local('MathJax_Caligraphic
+        Bold'), local('MathJax_Caligraphic-Bold')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-cal-Bx;
+ src: local('MathJax_Caligraphic');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-cal-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-R;
+ src: local('MathJax_Fraktur'),
+        local('MathJax_Fraktur-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-B;
+ src: local('MathJax_Fraktur Bold'),
+        local('MathJax_Fraktur-Bold')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-frak-Bx;
+ src: local('MathJax_Fraktur');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-frak-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-math-BI;
+ src: local('MathJax_Math
+        BoldItalic'), local('MathJax_Math-BoldItalic')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-math-BIx;
+ src: local('MathJax_Math');
+
+        font-weight: bold;
+ font-style: italic
+ }
+
+ @font-face
+        {
+ font-family: MJXc-TeX-math-BIw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-sans-R;
+ src: local('MathJax_SansSerif'),
+        local('MathJax_SansSerif-Regular')
+ }
+
+ @font-face
+        {
+ font-family: MJXc-TeX-sans-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-sans-B;
+ src: local('MathJax_SansSerif
+        Bold'), local('MathJax_SansSerif-Bold')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-sans-Bx;
+ src: local('MathJax_SansSerif');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-sans-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-sans-I;
+ src: local('MathJax_SansSerif
+        Italic'), local('MathJax_SansSerif-Italic')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-sans-Ix;
+ src: local('MathJax_SansSerif');
+
+        font-style: italic
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-sans-Iw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-script-R;
+ src: local('MathJax_Script'),
+        local('MathJax_Script-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-script-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-type-R;
+ src: local('MathJax_Typewriter'),
+        local('MathJax_Typewriter-Regular')
+ }
+
+ @font-face
+        {
+ font-family: MJXc-TeX-type-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-cal-R;
+ src: local('MathJax_Caligraphic'),
+        local('MathJax_Caligraphic-Regular')
+ }
+
+
+        @font-face {
+ font-family: MJXc-TeX-cal-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-B;
+ src: local('MathJax_Main Bold'),
+        local('MathJax_Main-Bold')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-Bx;
+ src: local('MathJax_Main');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-main-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-I;
+ src: local('MathJax_Main Italic'),
+        local('MathJax_Main-Italic')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-Ix;
+ src: local('MathJax_Main');
+
+        font-style: italic
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-main-Iw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-R;
+ src: local('MathJax_Main'),
+        local('MathJax_Main-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-main-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-math-I;
+ src: local('MathJax_Math Italic'),
+        local('MathJax_Math-Italic')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-math-Ix;
+ src: local('MathJax_Math');
+
+        font-style: italic
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-math-Iw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size1-R;
+ src: local('MathJax_Size1'),
+        local('MathJax_Size1-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size1-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size2-R;
+ src: local('MathJax_Size2'),
+        local('MathJax_Size2-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size2-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size3-R;
+ src: local('MathJax_Size3'),
+        local('MathJax_Size3-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size3-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size4-R;
+ src: local('MathJax_Size4'),
+        local('MathJax_Size4-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-size4-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-R;
+ src: local('MathJax_Vector'),
+        local('MathJax_Vector-Regular')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-Rw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf')
+        format('opentype')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-B;
+ src: local('MathJax_Vector Bold'),
+        local('MathJax_Vector-Bold')
+ }
+
+ @font-face {
+
+        font-family: MJXc-TeX-vec-Bx;
+ src: local('MathJax_Vector');
+
+        font-weight: bold
+ }
+
+ @font-face {
+ font-family:
+        MJXc-TeX-vec-Bw;
+ src /*1*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot');
+
+        src /*2*/: url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff')
+        format('woff'), url('https://www.digikey.com/schemeitcdn/static/js/library/MathJax-2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf')
+        format('opentype')
+ }
+
+    </xhtml:style>
+  <defs
+     id="defs1" />
+  <g
+     transform="translate(-326.30899,-131.2662)"
+     id="g71">
+    <rect
+       x="729"
+       y="189"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect1" />
+    <path
+       d="m 730,191 v 10"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path2" />
+    <rect
+       x="729"
+       y="299"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect5" />
+    <g
+       id="g80">
+      <rect
+         x="729"
+         y="249"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect2" />
+      <path
+         d="m 730,239 v 10"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path3" />
+      <path
+         d="m 723,202 c 13.39,-0.18 14,0 14,0 v 36 h -14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path4" />
+      <rect
+         x="729"
+         y="249"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect4" />
+      <path
+         d="m 719,271 c 22,0 22,0 22,0"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path5" />
+      <path
+         d="m 719,279 c 22,0 22,0 22,0"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path6" />
+      <path
+         d="m 730,251 v 19"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path7" />
+    </g>
+    <path
+       d="m 730,280 v 19"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path8" />
+    <rect
+       x="729"
+       y="319"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect8" />
+    <rect
+       x="729"
+       y="379"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect9" />
+    <path
+       d="m 730,321 v 10"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path9" />
+    <path
+       d="m 730,369 v 10"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path10" />
+    <path
+       d="m 723,332 c 13.39,-0.18 14,0 14,0 v 36 h -14 z"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path11" />
+    <rect
+       x="729"
+       y="379"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect11" />
+    <rect
+       x="729"
+       y="439"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect12" />
+    <rect
+       x="689"
+       y="429"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect13" />
+    <path
+       d="m 730,381 v 13.5"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path13" />
+    <path
+       d="m 730,429 v 10"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path14" />
+    <path
+       d="M 730,395 H 715"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path15" />
+    <path
+       d="M 730,425 H 715"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path16" />
+    <path
+       d="m 715,405 v 10"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path17" />
+    <path
+       d="m 715,420 v 10"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path18" />
+    <path
+       d="M 715,400 V 390"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path19" />
+    <path
+       d="m 722,410 h 8 v 19"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path20" />
+    <circle
+       cx="730"
+       cy="425"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="none"
+       id="ellipse20"
+       r="2.0000031" />
+    <path
+       d="m 691,430 h 15"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path21" />
+    <path
+       d="m 707,395 v 30"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path22" />
+    <path
+       d="m 707,390 v 40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path23" />
+    <path
+       d="m 722.39,406 -6,4 6,4 z"
+       fill="#000000"
+       stroke="#000000"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path24" />
+    <rect
+       x="559"
+       y="209"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect25" />
+    <path
+       d="m 560,211 v 21"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path26" />
+    <rect
+       x="559"
+       y="439"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect28" />
+    <path
+       d="m 560,418 v 21"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path29" />
+    <rect
+       x="509"
+       y="209"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect33" />
+    <path
+       d="m 510,211 v 21"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path34" />
+    <rect
+       x="509"
+       y="439"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect36" />
+    <path
+       d="m 510,418 v 21"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path37" />
+    <rect
+       x="459"
+       y="209"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect41" />
+    <path
+       d="m 460,211 v 21"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path42" />
+    <rect
+       x="459"
+       y="439"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       pointer-events="none"
+       id="rect44" />
+    <path
+       d="m 460,418 v 21"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path45" />
+    <path
+       d="M 730,190 V 170 H 460 v 40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path49" />
+    <path
+       d="M 510,210 V 172"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path50" />
+    <circle
+       cx="510"
+       cy="170"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="none"
+       id="ellipse50"
+       r="2" />
+    <path
+       d="M 560,210 V 172"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path51" />
+    <circle
+       cx="560"
+       cy="170"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="none"
+       id="ellipse51"
+       r="2" />
+    <path
+       d="m 560,440 v 40 h 170 v -40"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path55" />
+    <path
+       d="m 460,440 v 40 h 98"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path56" />
+    <circle
+       cx="560"
+       cy="480"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="none"
+       id="ellipse56"
+       r="2" />
+    <path
+       d="m 510,440 v 38"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path57" />
+    <circle
+       cx="510"
+       cy="480"
+       fill="#000000"
+       stroke="#000000"
+       stroke-width="2"
+       pointer-events="none"
+       id="ellipse57"
+       r="2" />
+    <rect
+       x="349"
+       y="299"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="rect57" />
+    <rect
+       x="349"
+       y="339"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="rect58" />
+    <rect
+       x="349"
+       y="319"
+       width="2"
+       height="2"
+       fill="#000000"
+       stroke="none"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="rect59" />
+    <path
+       d="m 369.97,319 c 0.51,-10.95 9.73,-19.44 20.68,-19.06 10.94,0.39 19.54,9.5 19.29,20.45 -0.25,10.95 -9.27,19.66 -20.22,19.54 -10.96,-0.13 -19.77,-9.04 -19.77,-20"
+       fill="#ffffff"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linejoin="round"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path59" />
+    <path
+       d="m 351,300 h 4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path61" />
+    <path
+       d="m 351,340 h 4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path62" />
+    <path
+       d="m 351,320 h 4"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path63" />
+    <path
+       d="m 356.07,320 h 13.86"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="square"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path64" />
+    <path
+       d="m 356,300 17,8"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path65" />
+    <path
+       d="m 356,340 17,-8"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       transform="matrix(-1,0,0,1,760,0)"
+       pointer-events="none"
+       id="path66" />
+    <path
+       d="m 410,300 h 48"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path68" />
+    <path
+       d="m 410,320 h 98"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path69" />
+    <path
+       d="M 410,340 H 558"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path70" />
+    <g
+       id="g79">
+      <rect
+         x="559"
+         y="269"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect24" />
+      <path
+         d="m 560,248 v 21"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path25" />
+      <path
+         d="m 552,247.17 h 16 l -8,-14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path27" />
+      <path
+         d="m 552.08,233.18 h 16"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path28" />
+      <rect
+         x="559"
+         y="379"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect29" />
+      <path
+         d="m 560,381 v 21"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path30" />
+      <path
+         d="m 552,417.17 h 16 l -8,-14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path31" />
+      <path
+         d="m 552.08,403.18 h 16"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path32" />
+      <rect
+         x="509"
+         y="269"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect32" />
+      <path
+         d="m 510,248 v 21"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path33" />
+      <path
+         d="m 502,247.17 h 16 l -8,-14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path35" />
+      <path
+         d="m 502.08,233.18 h 16"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path36" />
+      <rect
+         x="509"
+         y="379"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect37" />
+      <path
+         d="m 510,381 v 21"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path38" />
+      <path
+         d="m 502,417.17 h 16 l -8,-14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path39" />
+      <path
+         d="m 502.08,403.18 h 16"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path40" />
+      <rect
+         x="459"
+         y="269"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect40" />
+      <path
+         d="m 460,248 v 21"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path41" />
+      <path
+         d="m 452,247.17 h 16 l -8,-14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path43" />
+      <path
+         d="m 452.08,233.18 h 16"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path44" />
+      <rect
+         x="459"
+         y="379"
+         width="2"
+         height="2"
+         fill="#000000"
+         stroke="none"
+         pointer-events="none"
+         id="rect45" />
+      <path
+         d="m 460,381 v 21"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path46" />
+      <path
+         d="m 452,417.17 h 16 l -8,-14 z"
+         fill="#ffffff"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-linecap="square"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path47" />
+      <path
+         d="m 452.08,403.18 h 16"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path48" />
+      <path
+         d="M 460,270 V 380"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path52" />
+      <path
+         d="M 510,380 V 270"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path53" />
+      <path
+         d="M 560,270 V 380"
+         fill="none"
+         stroke="#000000"
+         stroke-width="2"
+         stroke-miterlimit="10"
+         pointer-events="none"
+         id="path54" />
+      <circle
+         cx="460"
+         cy="300"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         pointer-events="none"
+         id="ellipse68"
+         r="2" />
+      <circle
+         cx="510"
+         cy="320"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         pointer-events="none"
+         id="ellipse69"
+         r="2" />
+      <circle
+         cx="560"
+         cy="340"
+         fill="#000000"
+         stroke="#000000"
+         stroke-width="2"
+         pointer-events="none"
+         id="ellipse70"
+         r="2" />
+    </g>
+    <path
+       d="M 730,320 V 300"
+       fill="none"
+       stroke="#000000"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       pointer-events="none"
+       id="path71" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman,  Italic';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+       x="352.73495"
+       y="323.90216"
+       id="text71"><tspan
+         sodipodi:role="line"
+         id="tspan71"
+         x="352.73495"
+         y="323.90216"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, '">PMSM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+       x="326.96909"
+       y="361.85925"
+       id="text72"><tspan
+         sodipodi:role="line"
+         id="tspan72"
+         x="326.96909"
+         y="361.85925"
+         style="font-size:21.3333px">Generator</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+       x="472.84738"
+       y="146.07867"
+       id="text73"><tspan
+         sodipodi:role="line"
+         id="tspan73"
+         x="472.84738"
+         y="146.07867"
+         style="font-size:21.3333px">Rectifire</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+       x="814.23907"
+       y="234.20479"
+       id="text74"><tspan
+         sodipodi:role="line"
+         id="tspan74"
+         x="814.23907"
+         y="234.20479"
+         style="text-align:center;text-anchor:middle">EDLC</tspan><tspan
+         sodipodi:role="line"
+         x="814.23907"
+         y="260.8714"
+         id="tspan75"
+         style="text-align:center;text-anchor:middle">unit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+       x="813.95782"
+       y="343.88708"
+       id="text76"><tspan
+         sodipodi:role="line"
+         id="tspan76"
+         x="813.95782"
+         y="343.88708"
+         style="text-align:center;text-anchor:middle">Protection</tspan><tspan
+         sodipodi:role="line"
+         x="813.95782"
+         y="370.55371"
+         id="tspan77"
+         style="text-align:center;text-anchor:middle">resistor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.3333px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000"
+       x="772.09332"
+       y="417.0625"
+       id="text78"><tspan
+         sodipodi:role="line"
+         id="tspan78"
+         x="772.09332"
+         y="417.0625">MOSFET</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect78"
+       width="145.01387"
+       height="340.49252"
+       x="437.53436"
+       y="154.92378"
+       ry="16.821606" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2;stroke-dasharray:8, 8;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect79"
+       width="74.827126"
+       height="126.45206"
+       x="692.58643"
+       y="177.23253"
+       ry="12.181163" />
+  </g>
+</svg>
