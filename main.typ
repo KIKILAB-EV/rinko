@@ -30,5 +30,5 @@
 #img("pic/exp/regeneration_circuit.svg", "回生回路", "exp:circuit", w:11cm)
 #imgN(("pic/exp/グラフ/Deceleration.svg", "pic/exp/グラフ/torque.svg","pic/exp/グラフ/N.svg", "pic/exp/グラフ/current.svg","pic/exp/グラフ/duty.svg", "pic/exp/グラフ/v_edlc.svg"), ("(a) Deceleration", "(b) Torque","(c) Rotational speed", "(d) Regenerative current","(e) Duty ratio", "(f) Charging voltage"), "実験および解析結果比較図", "exp:result", w:7.5cm)
 
-@exp:result から、実験と解析の結果が概ね一致していることがわかる。
+@exp:result から、実験と解析の結果が概ね一致しており充電電圧は解析において15.66[V]、実験においては15.46[V]であり、追従時間は解析においては0.91秒、実験においては0.82秒であった。
 //#include("reference.typ")
