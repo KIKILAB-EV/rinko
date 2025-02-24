@@ -3,25 +3,10 @@
 
 #show: thesis.with()
 
-#title(date:datetime(year:2025,month:4,day:20))
+#title(date:datetime(year:2025,month:4,day:1))
 
 = はじめに <beg>
 #pr
-
-$3 times 2 = #value(5.2,u:"m/s^2")$
-
-#img("VG.svg",cap:[$V_G$に関して],h:8cm, lab:<img:VG>,place:none)
-#tab(table(columns: 3,
-[a],[b],[c],
-[1],[2],[3],
-[4],[5],[6],
-[7],[8],[9],
-),cap:"aaa",lab:<tab:aaa>)
-#tab(table(columns: 3,
-[a],[b],[c],
-[1],[2],[3],
-[4],[5],[6],
-[7],[8],[9],
-),cap:"bbb",lab:<tab:bbb>)
-@tab:aaa, @tab:bbb, @img:VG で
-//#bibliography("./ref.bib", style: "./ieej.csl", title: "参考文献")
+#set text(font: ("Times New Roman", "MS Mincho"), size:12pt, lang:"zh")//日付フォーマット(YYYY/MM/DD)のために中国語に変更
+//#bibliography("./ref.bib", style: "輪講.csl", title:"参考文献")
+//#include "reference.typ"

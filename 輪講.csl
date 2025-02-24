@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never">
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title xml:lang="rinko">輪講</title>
+    <id>http://www.zotero.org/styles/輪講</id>
+    <link rel="self" href="http://www.zotero.org/styles/輪講"/>
+    <updated>2025-02-24T14:02:34+00:00</updated>
+  </info>
+  <macro name="author">
+    <names variable="author" delimiter="，"/>
+    <text value="："/>
+  </macro>
+  <macro name="title">
+    <text variable="title" quotes="false" prefix="“" suffix="”"/>
+    <choose>
+      <if type="webpage" match="any">
+        <text variable="URL" prefix=" &#10;"/>
+        <text value="" strip-periods="false" quotes="false"/>
+      </if>
+    </choose>
+  </macro>
+  <macro name="year">
+    <choose>
+      <if type="webpage" match="any">
+        <date date-parts="year-month-day" form="numeric" variable="accessed" prefix="(閲覧日：" suffix=")"/>
+      </if>
+      <else>
+        <date date-parts="year" form="text" variable="issued" prefix="(" suffix=")"/>
+      </else>
+    </choose>
+  </macro>
+
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number" form="short" prefix="(" suffix=")"/>
+    </layout>
+  </citation>
+  <bibliography hanging-indent="true">
+    <layout>
+      <text variable="citation-number" prefix="(" suffix=") "/>
+      <text macro="author"/>
+      <text macro="title"/>
+      <choose>
+        <if type="webpage" match="any"/>
+        <else>
+          <text variable="publisher" prefix="，"/>
+        </else>
+      </choose>
+      <text macro="year"/>
+    </layout>
+  </bibliography>
+</style>

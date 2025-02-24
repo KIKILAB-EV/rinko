@@ -1,5 +1,6 @@
 #import "bxbibwrite.typ": *
-#import "@preview/metro:0.1.0": *
+
+#import "@preview/metro:0.3.0": *
 
 #let heading_font(body) = {
 	set text(font: ("Times New Roman", "HGMinchoE"),size : 12pt)
@@ -11,12 +12,12 @@
 	body
 }
 
-#let title(date:datetime.today(), id : "電21-40", name : "荻野 健太") = {
+#let title(date:datetime.today(), id : "電21-40", name : "荻野 健太", year : 2025, content : "研究経過報告") = {
 	set align(center)
 	set text(size:12pt)
-	[電気機器研究室#h(0.5em)#date.display("[year]年度")#h(0.5em)輪講資料]
+	[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
 	parbreak()
-	title_font([電気自動車班#h(0.5em)研究経過報告])
+	title_font([電気自動車班#h(0.5em)#content])
 	set align(right)
 	v(0em)
 	let wd = date.display("[weekday]")
@@ -71,16 +72,11 @@
 	h(1em)
 }
 
-#let img(path, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
+#let img(path, cap:none, lab:none, w:auto, h:auto, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
-		if(bib != none){
-			captioon = [#std.h(0.5em)#cap#bib]
-		}
-		else{
-			captioon = [#std.h(0.5em)#cap]
-		}
+		captioon = [#std.h(0.5em)#cap]
 	}
 
 	v(1em)
@@ -101,16 +97,11 @@
 
 }
 
-#let imgN(imgs, caps, cap, lab, w:auto, h:auto, bib:"", place:none) = {
+#let imgN(imgs, caps, cap, lab, w:auto, h:auto, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
-		if(bib != none){
-			captioon = [#std.h(0.5em)#cap#bib]
-		}
-		else{
-			captioon = [#std.h(0.5em)#cap]
-		}
+		captioon = [#std.h(0.5em)#cap]
 	}
 	let ary = array(())
 	for i in range(imgs.len()) {
@@ -145,12 +136,7 @@
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
 	let captioon = []
 	if (cap != none){
-		if(bib != none){
-			captioon = [#std.h(0.5em)#cap#bib]
-		}
-		else{
-			captioon = [#std.h(0.5em)#cap]
-		}
+		captioon = [#std.h(0.5em)#cap]
 	}
 	v(1em)
 	[#figure(
@@ -202,16 +188,18 @@
 	// counting caption number
 	show figure.where(
 		kind: "table"
-	): it => [
-		#set figure.caption(position: top, separator: none)
-		#it
-	]
+	): it => {
+		set figure.caption(position: top, separator: none)
+		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
+		it.body
+	}
 	show figure.where(
 		kind: "image"
-	): it => [
-		#set figure.caption(position: bottom, separator: none)
-		#it
-	]
+	): it => {
+		it.body
+		set figure.caption(position: top, separator: none)
+		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
+	}
 		//it.body
 		//it
 	
@@ -241,7 +229,8 @@
 	// 	}
 	//}
 
-	set text(font: ("Times New Roman", "MS Mincho"), size:12pt, lang:"ja") 
+	set text(font: ("Times New Roman", "MS Mincho"), size:12pt, lang:"ja")
+	
 	show label("bold"): set text(font: ("Times New Roman", "HGMinchoE"), size: 12pt)
 	show label("boldL"): set text(font: ("Times New Roman", "HGMinchoE"), size: 14pt)
 
