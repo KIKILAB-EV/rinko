@@ -12,7 +12,7 @@
 	body
 }
 
-#let title(date:datetime.today(), id : "電21-40", name : "荻野 健太", year : 2025, content : "研究経過報告") = {
+#let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2025, content : "研究経過報告") = {
 	set align(center)
 	set text(size:12pt)
 	[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
@@ -43,7 +43,7 @@
 		wd = "土"
 	}
 	let data = date.display("[month padding:space]月[day padding:space]日")
-	[#data (#wd)#h(1em)#id#h(0.5em)#name]
+	[#data (#wd)#h(1em)#id#h(1em)#name]
 }
 
 #let value(v,e:none,u:none) = {
