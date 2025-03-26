@@ -1,6 +1,6 @@
 #import "bxbibwrite.typ": *
 
-#import "@preview/metro:0.3.0": *
+#import "metro/lib.typ": *
 
 #let heading_font(body) = {
 	set text(font: ("Times New Roman", "HGMinchoE"),size : 12pt)
