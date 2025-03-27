@@ -55,6 +55,11 @@
 	linebreak()
 }
 
+#let sep = {
+	lb
+	lb
+}
+
 //新しい段落
 #let br = {
 	linebreak()
@@ -97,7 +102,7 @@
 
 }
 
-#let imgN(imgs, caps, cap, lab, w:auto, h:auto, place:none) = {
+#let imgN(imgs, caps, cap, lab:none, w:auto, h:auto, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
@@ -121,7 +126,7 @@
 				),
 				caption: captioon,
 				supplement: [図],
-				numbering: image_num,
+				numbering: "1",
 				kind: "image",
 				placement: place
 			) 
@@ -131,6 +136,39 @@
 		]
 		v(1em)
 	
+}
+
+#let vimgN(imgs, caps, cap, lab:none, w:auto, h:auto, place:none) = {
+	set align(center)
+	let captioon = []
+	if (cap != none){
+		captioon = [#std.h(0.5em)#cap]
+	}
+	let ary = array(())
+	for i in range(imgs.len()) {
+		if (i == imgs.len() -1 and calc.odd(imgs.len())){
+			ary.push(grid.cell(colspan:2, grid(image(imgs.at(i), width: w), v(0.5em), caps.at(i), v(0.8em))))
+		}
+		else {
+			ary.push(grid(image(imgs.at(i), width: w), v(0.5em), caps.at(i), v(0.8em)))
+		}
+	}
+	[
+		#v(1em)
+		#figure(
+			grid(columns: 1, row-gutter: 5mm, column-gutter: 5mm,
+				..ary.map((i) => i).flatten(),
+				align: center+horizon,
+			),
+			caption: cap,
+			supplement: [図],
+			numbering: "1",
+			kind: "image",		) 
+		#if (lab != none) {
+				lab	
+		}
+		#v(1em)
+	]
 }
 
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
