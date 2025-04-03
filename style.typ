@@ -1,6 +1,6 @@
 #import "bxbibwrite.typ": *
 
-#import "metro/lib.typ": *
+//#import "metro/lib.typ": *
 
 #let heading_font(body) = {
 	set text(font: ("Times New Roman", "HGMinchoE"),size : 12pt)
@@ -44,6 +44,7 @@
 	}
 	let data = date.display("[month padding:space]月[day padding:space]日")
 	[#data (#wd)#h(1em)#id#h(1em)#name]
+	v(1em)
 }
 
 #let value(v,e:none,u:none) = {
@@ -73,7 +74,6 @@
 
 //セクションはじめ
 #let pr = {
-	v(0.5em)
 	h(1em)
 }
 
