@@ -258,7 +258,7 @@
 	set math.equation(supplement: [式], numbering: "(1)")
 	//show math.equation: it => [#h(0.15em,weak:true) #it #h(0.15em,weak:true)]
 	show: use-bib-item-ref.with(numbering: "(1)")
-
+	set par(justify: true, first-line-indent: 1em, leading: 0.8em)
 	body
 
 	set heading(level: 1, numbering: none)
