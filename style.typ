@@ -1,7 +1,5 @@
 #import "bxbibwrite.typ": *
 
-#import "metro/lib.typ": *
-
 #let heading_font(body) = {
 	set text(font: ("Times New Roman", "HGMinchoE"),size : 12pt)
 	body
@@ -121,7 +119,7 @@
 				),
 				caption: captioon,
 				supplement: [図],
-				numbering: image_num,
+				numbering: "1",
 				kind: "image",
 				placement: place
 			) 
