@@ -70,7 +70,17 @@
 	h(1em)
 }
 
-#let img(path, cap:none, lab:none, w:auto, h:auto, place:none) = {
+// 画像を配置する
+//
+// パラメータ:
+// - path: 画像のパス
+// - cap: 画像の説明
+// - lab: 画像へのラベル
+// - w: 画像の横幅 
+// - h: 画像の高さ
+// - bib: 参考文献
+// - place: 画像の配置 
+#let img(path, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
@@ -95,7 +105,18 @@
 
 }
 
-#let imgN(imgs, caps, cap, lab, w:auto, h:auto, place:none) = {
+// 画像を複数配置する
+//
+// パラメータ:
+// - imgs: 画像のパスの配列
+// - caps: 画像の説明の配列
+// - cap: 説明
+// - lab: 画像へのラベル
+// - w: 画像の横幅 
+// - h: 画像の高さ
+// - bib: 参考文献
+// - place: 画像の配置 
+#let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
@@ -126,11 +147,22 @@
 			#if (lab != none) {
 				lab	
 			}
+			#if (bib != none) {
+				bib
+			}
 		]
 		v(1em)
 	
 }
 
+// 表を配置する
+//
+//  パラメータ:
+//  - body: 表
+//  - cap: 表の説明
+//  - lab: 表へのラベル
+// 	- bib: 参考文献
+//  - place: 表の配置
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
 	let captioon = []
 	if (cap != none){
@@ -148,10 +180,16 @@
 	#if (lab != none) {
 		lab	
 	}
+	#if (bib != none) {
+		bib
+	}
 	]
 	v(1em)
 }
 
+// スタイルの適用
+// パラメータ
+//  - bibliography-file: 参考文献ファイルのパス
 #let thesis(
 	bibliography-file: none,
 	body,
@@ -269,6 +307,6 @@
 	// Display bibliography.
 	if bibliography-file != none {
 		show bibliography: set text(12pt)
-		bibliography(bibliography-file, title: "", style: "style.csl")
+		bibliography(bibliography-file, style: "輪講.csl", title:"参考文献")
 	}
 }
