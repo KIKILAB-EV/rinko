@@ -1,23 +1,21 @@
 #import "bxbibwrite.typ": *
 
-#import "metro/lib.typ": *
-
-#let heading_font(body) = {
-	set text(font: ("Times New Roman", "HGMinchoE"),size : 12pt)
-	body
-}
-
-#let title_font(body) = {
-	set text(font: ("Times New Roman", "HGMinchoE"), size:14pt) 
-	body
-}
+#let roman_font = (name: "Times New Roman", covers: regex("[ -~]"))
+#let bold_font = (name: "HGMinchoE", covers: regex("[^ -~]"))
+#let normal_font = (name: "MS Mincho", covers: regex("[^ -~]"))
 
 #let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2025, content : "研究経過報告") = {
+	
+	let title_font(body) = {
+		set text(font: (roman_font, bold_font), size:14pt) 
+		body
+	}
 	set align(center)
 	set text(size:12pt)
-	[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
-	parbreak()
-	title_font([電気自動車班#h(0.5em)#content])
+	block[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
+	v(0.5em)
+	block(title_font([電気自動車班#h(0.5em)#content]))
+	v(0.5em)
 	set align(right)
 	v(0em)
 	let wd = date.display("[weekday]")
@@ -43,11 +41,8 @@
 		wd = "土"
 	}
 	let data = date.display("[month padding:space]月[day padding:space]日")
-	[#data (#wd)#h(1em)#id#h(1em)#name]
-}
-
-#let value(v,e:none,u:none) = {
-	qty(v,u,e:e,per-mode: "symbol")
+	block[#data (#wd)#h(1em)#id#h(1em)#name]
+	v(0.5em)
 }
 
 //改行
@@ -62,17 +57,21 @@
 }
 
 //改ページ
-#let np = {
+#let pb = {
 	pagebreak()
 }
 
-//セクションはじめ
-#let pr = {
-	v(0.5em)
-	h(1em)
-}
-
-#let img(path, cap:none, lab:none, w:auto, h:auto, place:none) = {
+// 画像を配置する
+//
+// パラメータ:
+// - path: 画像のパス
+// - cap: 画像の説明
+// - lab: 画像へのラベル
+// - w: 画像の横幅 
+// - h: 画像の高さ
+// - bib: 参考文献
+// - place: 画像の配置 
+#let img(path, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
@@ -97,7 +96,18 @@
 
 }
 
-#let imgN(imgs, caps, cap, lab, w:auto, h:auto, place:none) = {
+// 画像を複数配置する
+//
+// パラメータ:
+// - imgs: 画像のパスの配列
+// - caps: 画像の説明の配列
+// - cap: 説明
+// - lab: 画像へのラベル
+// - w: 画像の横幅 
+// - h: 画像の高さ
+// - bib: 参考文献
+// - place: 画像の配置 
+#let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
@@ -121,18 +131,29 @@
 				),
 				caption: captioon,
 				supplement: [図],
-				numbering: image_num,
+				numbering: "1",
 				kind: "image",
 				placement: place
 			) 
 			#if (lab != none) {
 				lab	
 			}
+			#if (bib != none) {
+				bib
+			}
 		]
 		v(1em)
 	
 }
 
+// 表を配置する
+//
+//  パラメータ:
+//  - body: 表
+//  - cap: 表の説明
+//  - lab: 表へのラベル
+// 	- bib: 参考文献
+//  - place: 表の配置
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
 	let captioon = []
 	if (cap != none){
@@ -150,15 +171,25 @@
 	#if (lab != none) {
 		lab	
 	}
+	#if (bib != none) {
+		bib
+	}
 	]
 	v(1em)
 }
 
+// スタイルの適用
+// パラメータ
+//  - bibliography-file: 参考文献ファイルのパス
 #let thesis(
 	bibliography-file: none,
 	body,
 ) = {
-	// citation number
+	let leading = 0.8em
+	let heading_font(body) = {
+		set text(font: (roman_font, bold_font),size : 12pt)
+		body
+	}
 	show ref: it => {
 		let el = it.element
 		if el == none{
@@ -180,12 +211,6 @@
 			}
 		}
 	}
-// 	#show figure.caption: it => [
-//   #underline(it.body) |
-//   #it.supplement
-//   #context it.counter.display(it.numbering)
-// ]
-	// counting caption number
 	show figure.where(
 		kind: "table"
 	): it => {
@@ -200,52 +225,20 @@
 		set figure.caption(position: top, separator: none)
 		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
 	}
-		//it.body
-		//it
-	
-	// show figure: it => {
-	// 	set align(center)
-	// 	if it.kind == "image" {
-	// 		set text(size: 12pt)
-	// 		it.body
-	// 		it.supplement
-	// 		" " + it.counter.display(it.numbering)
-	// 		if (it.caption != none){
-	// 			"　" + it.caption.body
-	// 		}
-	// 	} 
-	// 	// else if it.kind == "table" {
-	// 	// 	set text(size: 12pt)
-	// 	// 	it.supplement
-	// 	// 	" " + it.counter.display(it.numbering)
-	// 	// 	if (it.caption != none){
-	// 	// 		"　" + it.caption.body
-	// 	// 	}
-	// 	// 	set text(size: 12pt)
-	// 	// 	it.body
-	// 	// } 
-	// 	else {
-	// 		//it
-	// 	}
-	//}
 
-	set text(font: ("Times New Roman", "MS Mincho"), size:12pt, lang:"ja")
+	set text(font: (roman_font, normal_font), size:12pt, lang:"ja")
 	
-	show label("bold"): set text(font: ("Times New Roman", "HGMinchoE"), size: 12pt)
-	show label("boldL"): set text(font: ("Times New Roman", "HGMinchoE"), size: 14pt)
+	show label("bold"): set text(font: (roman_font, bold_font), size: 12pt)
+	show label("boldL"): set text(font: (roman_font, bold_font), size: 14pt)
 
-	// Configure the page properties.
 	set page(paper:"a4", numbering: "1", margin: (top:30mm,bottom:35mm,x:30mm))
 
 	counter(page).update(1)
 
-	// Configure paragraph properties.
-	//set par(first-line-indent: 1em, justify: true, leading: 0.8em)
-	// Configure chapter headings.
 	set heading(numbering: (..args) => {
-		let nums = args.pos() // 引数の位置引数を`array`として取得
+		let nums = args.pos()
 		let n = nums.at(2)
-		if nums.len() == 1 { // 階層総数が1しかない、即ち最高階層
+		if nums.len() == 1 { 
 			return numbering("1. ", n)
 		} else {
 			return numbering("1. ", n)
@@ -253,14 +246,14 @@
 	}, level: 3)
 	show heading: it => {
 		heading_font(it)
-		//
+		v(0.5em)
 	}
 	counter(page).update(1)
 
 	set math.equation(supplement: [式], numbering: "(1)")
-	//show math.equation: it => [#h(0.15em,weak:true) #it #h(0.15em,weak:true)]
+	
 	show: use-bib-item-ref.with(numbering: "(1)")
-
+	set par(justify: true, first-line-indent: (amount: 1.0em, all: true), leading: leading, spacing: leading)
 	body
 
 	set heading(level: 1, numbering: none)
@@ -268,9 +261,8 @@
 		heading_font(it)
 	}
 
-	// Display bibliography.
 	if bibliography-file != none {
 		show bibliography: set text(12pt)
-		bibliography(bibliography-file, title: "", style: "style.csl")
+		bibliography(bibliography-file, style: "輪講.csl", title:"参考文献")
 	}
 }

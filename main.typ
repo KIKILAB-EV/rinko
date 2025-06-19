@@ -1,13 +1,10 @@
 #import "./style.typ":*
-#import "bxbibwrite.typ": *
+#import "./unit.typ"
 
-#show: thesis.with()
+#show: thesis.with(bibliography-file: none)
 
+//#title(date:datetime(year:2025,month:4,day:1),id:"電21-065", name:"木村 駿太")
+//#title(date:datetime(year:2025,month:4,day:1),id:"電22-113", name:"中島 壮")
 #title(date:datetime(year:2025,month:4,day:1))
 
 = はじめに <beg>
-#pr
-#set text(font: ("Times New Roman", "MS Mincho"), size:12pt, lang:"zh")//日付フォーマット(YYYY/MM/DD)のために中国語に変更
-
-//#bibliography("./ref.bib", style: "輪講.csl", title:"参考文献")
-//#include "reference.typ"
