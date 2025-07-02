@@ -13,7 +13,7 @@
 
 
 = 解析方法
-@fig:circuit に回生回路を示す。PSIM上で整流回路の後段にコンデンサを並列に接続し、コンデンサ容量$C$を0.1から1000 #unit.uF まで変化させ各特性を解析した。なお回生開始回転数は$N$ = 1000 rpm, コンデンサの等価直列抵抗は$C_"ESR"$ = 0.1 #unit.Ohm, 保護抵抗$R_"p"$ = 10 #unit.Ohm, EDLCは容量$C_"EDLC"$ = 0.0556 F, 抵抗$R_"EDLC"$ = 4.55 #unit.Ohm とする。
+@fig:circuit に回生回路を示す。PSIM上で整流回路の後段にコンデンサを並列に接続し、初期回転数$N$ = 1100 rpm から自然減速させ、回生開始回転数$N$ = 1000 rpm になったらスイッチSを閉じる。コンデンサ容量$C$を0.1 #unit.uF から1000 #unit.uF まで変化させ各特性を解析した。コンデンサの等価直列抵抗は$C_"ESR"$ = 0.1 #unit.Ohm, 保護抵抗$R_"p"$ = 10 #unit.Ohm, EDLCは容量$C_"EDLC"$ = 0.0556 F, 抵抗$R_"EDLC"$ = 4.55 #unit.Ohm とする。
 #img("\graph\circuit.svg", cap:"回生回路図", lab:<fig:circuit>)
 #pb
 = 解析結果
