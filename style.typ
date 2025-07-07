@@ -107,7 +107,7 @@
 // - h: 画像の高さ
 // - bib: 参考文献
 // - place: 画像の配置 
-#let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
+#let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none,col : 2) = {
 	set align(center)
 	let captioon = []
 	if (cap != none){
@@ -115,8 +115,8 @@
 	}
 	let ary = array(())
 	for i in range(imgs.len()) {
-		if (i == imgs.len() -1 and calc.odd(imgs.len())){
-			ary.push(grid.cell(colspan:2, grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em))))
+		if (i == imgs.len() -1 and calc.rem(imgs.len(),col)==1){
+			ary.push(grid.cell(colspan:col, grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em))))
 		}
 		else {
 			ary.push(grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em)))
@@ -125,7 +125,7 @@
 		v(1em)
 		[
 			#figure(
-				grid(columns: 2, row-gutter: 5mm, column-gutter: 5mm,
+				grid(columns: col, row-gutter: 5mm, column-gutter: 5mm,
 					..ary.map((i) => i).flatten(),
 					align: center+horizon,
 				),
