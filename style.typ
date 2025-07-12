@@ -119,7 +119,7 @@
 			ary.push(grid.cell(colspan:2, grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em))))
 		}
 		else {
-			ary.push(grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em)))
+			ary.push(grid(image(imgs.at(i), width: w), v(0.1em), caps.at(i)))
 		}
 	}
 		v(1em)
