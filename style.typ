@@ -178,6 +178,15 @@
 	v(1em)
 }
 
+
+#let dummy(words, offset:0)={
+    let text = "ヘッケはこれらのL-函数が全複素平面へ有理型接続を持ち、指標が自明であるときにはs=1でオーダー1である極を持ち、それ以外では解析的であることを証明した。原始ヘッケ指標（原始ディリクレ指標に同じ方法であるmodulusに相対的に定義された）に対し、ヘッケは、これらのL-函数が指標のL-函数の函数等式を満たし、L-函数の複素共役指標であることを示した。主イデアル上の座と、無限での座を含む全ての例外有限集合の上で1である単円の上への写像を取ることで、イデール類群の指標ψを考える。すると、ψはイデアル群ISの指標χを生成し、イデアル群はS上に入らない素イデアル上の自由アーベル群となる。[2]Sに入らない各々の素イデアルpの統一された元πを取り、各々のpを、pの中ではπであり、そうでない場合は1であるようなイデールのクラスへ写すことにより、ISからイデアル類への写像Πを定義することができる。χをΠとψの合成とすると、χはイデアル群上の指標としてうまく定義できる。"
+
+    let length = text.clusters().len()
+    let times = calc.div-euclid(offset + words, length) + 1
+    (text * times).clusters().slice(offset, offset + words).join("")
+}
+
 // スタイルの適用
 // パラメータ
 //  - bibliography-file: 参考文献ファイルのパス
@@ -214,16 +223,20 @@
 	show figure.where(
 		kind: "table"
 	): it => {
-		set figure.caption(position: top, separator: none)
-		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
-		it.body
+		place(center+it.placement, [
+			#set figure.caption(position: top, separator: none)
+			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			#it.body
+		], float: true)
 	}
 	show figure.where(
 		kind: "image"
 	): it => {
-		it.body
-		set figure.caption(position: top, separator: none)
-		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
+		place(center+it.placement, [
+			#it.body
+			#set figure.caption(position: top, separator: none)
+			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+		], float: true)
 	}
 
 	set text(font: (roman_font, normal_font), size:12pt, lang:"ja")

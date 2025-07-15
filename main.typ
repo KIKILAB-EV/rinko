@@ -7,4 +7,7 @@
 //#title(date:datetime(year:2025,month:4,day:1),id:"電22-113", name:"中島 壮")
 #title(date:datetime(year:2025,month:4,day:1))
 
-= はじめに <beg>
+
+= はじめに
+
+#dummy(1000)
