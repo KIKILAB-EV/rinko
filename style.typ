@@ -237,18 +237,17 @@
 
 	set heading(numbering: (..args) => {
 		let nums = args.pos()
-		let n = nums.at(2)
+		//let n = nums.at(2)
 		if nums.len() == 1 { 
-			return numbering("1. ", n)
+			return numbering("1. ", ..nums)
 		} else {
-			return numbering("1. ", n)
+			return numbering("1.1 ", ..nums)
 		}
-	}, level: 3)
+	})
 	show heading: it => {
 		heading_font(it)
 		v(0.5em)
 	}
-	counter(page).update(1)
 
 	set math.equation(supplement: [式], numbering: "(1)")
 	
@@ -256,10 +255,6 @@
 	set par(justify: true, first-line-indent: (amount: 1.0em, all: true), leading: leading, spacing: leading)
 	body
 
-	set heading(level: 1, numbering: none)
-	show heading: it => {
-		heading_font(it)
-	}
 
 	if bibliography-file != none {
 		show bibliography: set text(12pt)
