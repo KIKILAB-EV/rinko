@@ -10,3 +10,4 @@
 #let J = $"J"$
 #let N = $"N"$
 #let Ohm = $"Ω"$
+#let uF = $"μF"$
