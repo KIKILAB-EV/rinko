@@ -215,6 +215,11 @@
 				let num = numbering(el.numbering, ..counter(heading).at(loc)).at(0)
 				link(el.location(), "第" + str(num) + "節")
 			} 
+			else if el.func() == figure{
+				let loc = el.location()
+				let num = numbering(el.numbering, ..counter(figure).at(loc)).at(0)
+				link(el.location(), "図" + str(num))
+			}
 			else{
 				it
 			}
