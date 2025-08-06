@@ -62,6 +62,16 @@
 	pagebreak()
 }
 
+#let cred(body, bold:false) = {
+	let w = if bold { "bold" } else { "regular" }
+	text(body, fill: red, weight: w)
+}
+
+#let cblue(body, bold:false) = {
+	let w = if bold { "bold" } else { "regular" }
+	text(body, fill: blue, weight: w)
+}
+
 // 画像を配置する
 //
 // パラメータ:
@@ -216,6 +226,11 @@
 				let num = numbering(el.numbering, ..counter(heading).at(loc)).at(0)
 				link(el.location(), "第" + str(num) + "節")
 			} 
+			else if el.func() == figure{
+				let loc = el.location()
+				let num = numbering(el.numbering, ..counter(figure).at(loc)).at(0)
+				link(el.location(), "図" + str(num))
+			}
 			else{
 				it
 			}
@@ -233,11 +248,10 @@
 	show figure.where(
 		kind: "image"
 	): it => {
-		place(center+it.placement, [
-			#it.body
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-		], float: true)
+		v(0.5em)
+		it.body
+		set figure.caption(position: top, separator: none)
+		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
 	}
 	
 	show: remove-cjk-break-space
