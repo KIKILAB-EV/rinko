@@ -1,4 +1,5 @@
 #import "bxbibwrite.typ": *
+#import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
 
 #let roman_font = (name: "Times New Roman", covers: regex("[ -~]"))
 #let bold_font = (name: "HGMinchoE", covers: regex("[^ -~]"))
@@ -238,6 +239,8 @@
 			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
 		], float: true)
 	}
+	
+	show: remove-cjk-break-space
 
 	set text(font: (roman_font, normal_font), size:12pt, lang:"ja")
 	
