@@ -26,7 +26,7 @@ $<exp:calcW>
 = 解析結果
 @chart に各回転数ごとのエネルギーの割合を, @EnergyRatePlot に各回転数ごとの変化を示す。回転数が増加するに従い機械損の割合が減少し、ジュール損及び回生エネルギーが増加している。また、回転数が増加すると回転時間および回生時間は増加するが回生時間の割合は減少し、回生失効後の割合が増加している。
 @Mloss に回転数ごとの機械損の時間変化を示す。#cred([●])が回生失効, #cblue([●])が停止時刻を表す。
-#imgN(("\graph\chart\1000.svg", "\graph\chart\2000.svg", "\graph\chart\3000.svg"), ([(a) $N_0$=1000 rpm], [(b) $N_0$=2000 rpm], [(c) $N_0$=3000 rpm]), cap:"各回転数ごとのエネルギーの割合", lab:<chart>, w:8cm)
+#imgN(("\graph\pie\1000.png", "\graph\pie\2000.png", "\graph\pie\3000.png"), ([(a) $N_0$=1000 rpm], [(b) $N_0$=2000 rpm], [(c) $N_0$=3000 rpm]), cap:"各回転数ごとのエネルギーの割合", lab:<chart>, w:8cm)
 #imgN(("\graph\N\EnergyRate.svg", "\graph\N\Times.svg"), ("(a) エネルギーの割合", "(b) 回転時間と回生時間の割合"), cap:"回転数による変化", lab:<EnergyRatePlot>, w:100%)
 
 #imgN(("/graph/timed/Mloss.svg", "graph/timed/Tm.svg", "graph/timed/N.svg"), ([(a) 機械損$W_"m"$], "(b) 機械損トルク", [(c) 回転数]), cap:"機械損の時間変化", lab:<Mloss>, w:7.5cm)
