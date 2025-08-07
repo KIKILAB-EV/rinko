@@ -239,11 +239,9 @@
 	show figure.where(
 		kind: "table"
 	): it => {
-		place(center+it.placement, [
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-			#it.body
-		], float: true)
+			set figure.caption(position: top, separator: none)
+			[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
+			it.body
 	}
 	show figure.where(
 		kind: "image"
