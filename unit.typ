@@ -12,3 +12,5 @@
 #let Ohm = $"Ω"$
 #let uF = $"μF"$
 #let mH = $"mH"$
+#let Nm = $"Nm"$
+#let kgm2 = $"kg"dot"m"^2$

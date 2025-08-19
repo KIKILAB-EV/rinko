@@ -1,4 +1,5 @@
 #import "bxbibwrite.typ": *
+#import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
 
 #let roman_font = (name: "Times New Roman", covers: regex("[ -~]"))
 #let bold_font = (name: "HGMinchoE", covers: regex("[^ -~]"))
@@ -61,6 +62,16 @@
 	pagebreak()
 }
 
+#let cred(body, bold:false) = {
+	let w = if bold { "bold" } else { "regular" }
+	text(body, fill: red, weight: w)
+}
+
+#let cblue(body, bold:false) = {
+	let w = if bold { "bold" } else { "regular" }
+	text(body, fill: blue, weight: w)
+}
+
 // 画像を配置する
 //
 // パラメータ:
@@ -119,7 +130,7 @@
 			ary.push(grid.cell(colspan:2, grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em))))
 		}
 		else {
-			ary.push(grid(image(imgs.at(i), width: w), v(0.1em), caps.at(i)))
+			ary.push(grid(image(imgs.at(i), width: w), v(0.3em), caps.at(i), v(0.5em)))
 		}
 	}
 		v(1em)
@@ -178,6 +189,15 @@
 	v(1em)
 }
 
+
+#let dummy(words, offset:0)={
+    let text = "ヘッケはこれらのL-函数が全複素平面へ有理型接続を持ち、指標が自明であるときにはs=1でオーダー1である極を持ち、それ以外では解析的であることを証明した。原始ヘッケ指標（原始ディリクレ指標に同じ方法であるmodulusに相対的に定義された）に対し、ヘッケは、これらのL-函数が指標のL-函数の函数等式を満たし、L-函数の複素共役指標であることを示した。主イデアル上の座と、無限での座を含む全ての例外有限集合の上で1である単円の上への写像を取ることで、イデール類群の指標ψを考える。すると、ψはイデアル群ISの指標χを生成し、イデアル群はS上に入らない素イデアル上の自由アーベル群となる。[2]Sに入らない各々の素イデアルpの統一された元πを取り、各々のpを、pの中ではπであり、そうでない場合は1であるようなイデールのクラスへ写すことにより、ISからイデアル類への写像Πを定義することができる。χをΠとψの合成とすると、χはイデアル群上の指標としてうまく定義できる。"
+
+    let length = text.clusters().len()
+    let times = calc.div-euclid(offset + words, length) + 1
+    (text * times).clusters().slice(offset, offset + words).join("")
+}
+
 // スタイルの適用
 // パラメータ
 //  - bibliography-file: 参考文献ファイルのパス
@@ -206,6 +226,11 @@
 				let num = numbering(el.numbering, ..counter(heading).at(loc)).at(0)
 				link(el.location(), "第" + str(num) + "節")
 			} 
+			else if el.func() == figure{
+				let loc = el.location()
+				let num = numbering(el.numbering, ..counter(figure).at(loc)).at(0)
+				link(el.location(), "図" + str(num))
+			}
 			else{
 				it
 			}
@@ -214,17 +239,20 @@
 	show figure.where(
 		kind: "table"
 	): it => {
-		set figure.caption(position: top, separator: none)
-		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
-		it.body
+			set figure.caption(position: top, separator: none)
+			[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
+			it.body
 	}
 	show figure.where(
 		kind: "image"
 	): it => {
+		v(0.5em)
 		it.body
 		set figure.caption(position: top, separator: none)
 		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
 	}
+	
+	show: remove-cjk-break-space
 
 	set text(font: (roman_font, normal_font), size:12pt, lang:"ja")
 	
@@ -237,17 +265,18 @@
 
 	set heading(numbering: (..args) => {
 		let nums = args.pos()
-		//let n = nums.at(2)
+		let n = nums.at(2)
 		if nums.len() == 1 { 
-			return numbering("1. ", ..nums)
+			return numbering("1. ", n)
 		} else {
-			return numbering("1.1 ", ..nums)
+			return numbering("1. ", n)
 		}
-	})
+	}, level: 3)
 	show heading: it => {
 		heading_font(it)
 		v(0.5em)
 	}
+	counter(page).update(1)
 
 	set math.equation(supplement: [式], numbering: "(1)")
 	
@@ -255,6 +284,10 @@
 	set par(justify: true, first-line-indent: (amount: 1.0em, all: true), leading: leading, spacing: leading)
 	body
 
+	set heading(level: 1, numbering: none)
+	show heading: it => {
+		heading_font(it)
+	}
 
 	if bibliography-file != none {
 		show bibliography: set text(12pt)

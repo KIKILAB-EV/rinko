@@ -3,40 +3,58 @@
 
 #show: thesis.with(bibliography-file: none)
 
-#title(date:datetime(year:2025,month:7,day:23),id:"電21-065", name:"木村 駿太")
-//#title(date:datetime(year:2025,month:7,day:16),id:"電22-113", name:"中島 壮")
+#title(date:datetime(year:2025,month:8,day:8),id:"電21-065", name:"木村 駿太")
+//#title(date:datetime(year:2025,month:4,day:1),id:"電22-113", name:"中島 壮")
 //#title(date:datetime(year:2025,month:4,day:1))
 
-= はじめに <beg>
-先週の解析において、EDLCを抵抗に置き換え消費電力量の解析を行った。しかし、解析に間違いがあったため再度同じ条件で解析を行う。
+
+= はじめに
+今回は各回転数ごとの回生前と停止後のエネルギーの割合を解析によって求める。
 
 = 解析方法
-@fig:circuit に解析回路を示す。回生開始回転数$N_0$=1000, 2000, 3000 rpmとし、EDLCを抵抗$R$に置き換え、$R$及び保護抵抗$R_P$での消費電力量及び初期エネルギーに対する比率を解析する。$C$を挿入しない場合及び$C$を0.1 #unit.uF から1000 #unit.uF まで変化させて解析を行う。$R$=100 #unit.Ohm, $R_P$=10 #unit.Ohm, $C_"ESR"$=10 #unit.Ohm, ダイオードの順方向電圧$V_F$=1.3 Vとし、解析時間は6秒間, タイムステップは10 $"μs"$とする。
-#img("graph/circuit.svg", cap:[解析回路], w:auto, lab:<fig:circuit>)
+初期回転数を$N_0$ = 500 - 3000 rpmと変化させ、@exp:calcW より初期エネルギー$W_0$, 機械損エネルギー$W_"m"$, ジュール熱$W_"joule"$, EDLCの充電エネルギー$W_"EDLC"$, その他のエネルギー$W_"other"$とその割合を求める。またEDLCの静電容量を$C$=0.0556 F, 内部抵抗を$R_"EDLC"$=4.5 #unit.Ohm, 保護抵抗を$R_"p"$ = 10 #unit.Ohm とする。
+#v(2em)
+$ 
+    T_"m" &= ((J_"PMSM")/tau + K_1)omega + T_"C"\
+    W_0 &= 1/2 J omega^2 \
+    W_"m" &= integral T_"m" omega "d" t \
+    
+    W_"EDLC" &= 1/2 C V_"EDLC"^2 \
+    W_"PMSM" &= R_"Stator" (I_"U"^" 2" + I_"V"^" 2" + I_"W"^" 
+    2") \
+    W_"Diode" &= sum(V_"f" I_"Diode") \
+    W_"joule" &= integral(R_"EDLC" + R_"p")I^2 "d" t + W_"PMSM" + W_"Diode" \
+    W_"other" &= W_0 - (W_"m" + W_"joule" + W_"EDLC") 
+$<exp:calcW>
+#pb
+#tab(
+    table(
+        columns: 3,
+        column-gutter: 2em,
+        row-gutter: 0.5em,
+        stroke:none,
+        table.hline(),
+        [サーボモータ慣性],[$J_"PMSM"$],[$6.0 times 10^(-4)$ #unit.kgm2],
+        [回転体慣性], [$J$], [0.0211106 #unit.kgm2],
+        [フライホイールトルク係数],[$K_1$],[$0.0025$],
+        [フライホイールトルク定数],[$T_"C"$],[$0.55$ #unit.Nm],
+        [軸時定数], [$tau$], [1.1 s],
+        [PMSM固定子抵抗], [$R_"Stator"$], [0.35 #unit.Ohm],
+        [ダイオード順方向電圧], [$V_f$], [1.3 V],
+        table.hline(),
+    ), cap:"実験装置諸元"
+)
 #pb
 = 解析結果
-#let h=95%
-@analysis:result に解析結果を, @analysis:result_vs1000 に$N_0$=1000 rpmに対する比率を示す。$C$挿入時と非挿入時の消費電力量はほぼ同じであり、消費電力量は$N_0$=1000 rpmの時に対して$N_0$=2000 rpmでは約6倍, $N_0$=3000 rpmでは約15.5倍に増加した。
+@chart に各回転数ごとのエネルギーの割合を、@EnergyRatePlot に回転数ごとのエネルギーの割合およびダイオード損の変化を示す。前回の輪講の「その他のエネルギー」の内訳はダイオードとモータ内の固定子抵抗によるものがほとんどであり、いずれにも該当しないものはいずれの回転数においても全体の0.01%以下であった。これは解析の際に解析ステップ幅などにより生じた誤差であると考えられる。
+#imgN(("\graph\chart\1000.svg", "\graph\chart\2000.svg", "\graph\chart\3000.svg"), ([(a) $N_0$=1000 rpm], [(b) $N_0$=2000 rpm], [(c) $N_0$=3000 rpm]), cap:"各回転数ごとのエネルギーの割合", lab:<chart>, w:7.5cm)
 
-初期エネルギーに対する消費電力量の比率は$N_0$=1000 rpmのときに対して$N_0$=2000 rpmでは1.47倍, $N_0$=3000 rpmでは1.7倍程度となった。初期エネルギーは回転数の2乗に比例するため、$N_0$=1000 rpmのときにくらべて$N_0$=2000 rpmでは約4倍, $N_0$=3000 rpmでは約9倍となる。また$C$が10 #unit.uF を超えたあたりで初期エネルギーに対する比率はやや低下した。
-#imgN(("graph/W.svg", "graph/rate.svg"),("(a) 消費電力量", "(b) 初期エネルギーに対する比率"), cap:[解析結果], lab:<analysis:result>, place:bottom)
-#imgN(("graph/W_vs1000.svg", "graph/rate_vs1000.svg"),("(a) 消費電力量", "(b) 初期エネルギーに対する比率"), cap:[$N_0$=1000 rpmに対する比率], lab:<analysis:result_vs1000>, place:bottom)
-#pb
-@analysis:vs_edlc にEDLCに電力回生した場合との比較を, @analysis:vs_edlc に電力回生した場合との比率を示す。抵抗での消費電力量及び初期エネルギーに対する比率はいずれも回転数によらず、EDLCに電力回生した時よりも2倍程度に増加した。EDLCに電力回生した場合は、EDLC内部抵抗による損失や回生失効による機械損の比率が増加するため、消費電力量に対して回生エネルギーは低下する。また回生時と抵抗での消費電力量の関係は回転数によらずおおむね一定であることから、電力回生時および抵抗に置き換えた場合の解析結果の一貫性はあるといえる。
-#imgN(("graph/compEDLC/W.svg", "graph/compEDLC/rate.svg",),("(a) 消費電力量", "(b) 初期エネルギーに対する比率"), cap:[電力回生時との比較], lab:<analysis:comp_edlc>, place:bottom)
-
-#imgN(("graph/compEDLC/W_vsEDLC.svg", "graph/compEDLC/rate_vsEDLC.svg",),("(a) 消費電力量", "(b) 初期エネルギーに対する比率"), cap:[電力回生時との比率], lab:<analysis:vs_edlc>, place:bottom)
+#imgN(("graph/N/EnergyRate.svg", "\graph\N\Dloss.svg"), ([(a) エネルギーの割合], [(b) ダイオード損の変化]), cap:"回転数による変化", lab:<EnergyRatePlot>, w:7.5cm)
 
 #pb
 = 補足資料
-== 各回転数における波形
-#imgN(("graph/wave/1000/N.svg", "graph/wave/1000/W.svg", "graph/wave/1000/Ic.svg", "graph/wave/1000/Ic_EXT.svg", "graph/wave/1000/I.svg", "graph/wave/1000/vc.svg"),("(a) 回転数", "(b) 消費電力量", "(c) コンデンサ電流", "(d) コンデンサ電流(拡大)", "(e) 回生電流", "(f) コンデンサ電圧"), cap:[$N_0$=1000 rpmにおける波形], lab:<analysis:wave_1000>, place:bottom)
-
-#imgN(("graph/wave/2000/N.svg", "graph/wave/2000/W.svg", "graph/wave/2000/Ic.svg", "graph/wave/2000/Ic_EXT.svg", "graph/wave/2000/I.svg", "graph/wave/2000/vc.svg"),("(a) 回転数", "(b) 消費電力量", "(c) コンデンサ電流", "(d) コンデンサ電流(拡大)", "(e) 回生電流", "(f) コンデンサ電圧"), cap:[$N_0$=2000 rpmにおける波形], lab:<analysis:wave_2000>, place:bottom)
-
-#imgN(("graph/wave/3000/N.svg", "graph/wave/3000/W.svg", "graph/wave/3000/Ic.svg", "graph/wave/3000/Ic_EXT.svg", "graph/wave/3000/I.svg", "graph/wave/3000/vc.svg"),("(a) 回転数", "(b) 消費電力量", "(c) コンデンサ電流", "(d) コンデンサ電流(拡大)", "(e) 回生電流", "(f) コンデンサ電圧"), cap:[$N_0$=3000 rpmにおける波形], lab:<analysis:wave_3000>, place:bottom)
-
-#pb
-== 1000 rpmにおける$C$非挿入時の実験結果
-$R$=125 Ω, $N_0$=1000 rpm, $C$を挿入しない場合について実験を行った。消費電力量は21 J程度となり、100 Ωでの解析とおおむね同じ値となった。
-#imgN(("graph/exp/N.svg", "graph/exp/V.svg", "graph/exp/I.svg", "graph/exp/W_V2R.svg", "graph/exp/W_IV.svg"),("(a) 回転数", "(b) 抵抗電圧", "(c) 電流", [(d) 消費電力量($W=V^2/R$)], [(e) 消費電力量($W=I V$)]), cap:[$N_0$=1000 rpmにおける実験結果], lab:<analysis:exp_1000>, place:bottom, w:7cm)
+#imgN(
+    ("\graph\N.svg", "\graph\I.svg", "\graph\Mloss.svg","\graph\Rloss.svg","\graph\RegE.svg","\graph\T.svg","\graph\Treg.svg","\graph\Tm.svg"),
+    ([(a) 回転数], [(b) 電流], [(c) 機械損], [(d) ジュール損], [(e) 回生エネルギー], [(f) トルク], [(g) 回生トルク], [(h) 機械トルク]),
+    cap:"各回転数ごとの時間変化", lab:<NIMRTE>, w:92%
+)
