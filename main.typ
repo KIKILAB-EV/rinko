@@ -3,13 +3,13 @@
 
 #show: thesis.with(bibliography-file: none)
 
-#title(date:datetime(year:2025,month:8,day:8),id:"電21-065", name:"木村 駿太")
-//#title(date:datetime(year:2025,month:4,day:1),id:"電22-113", name:"中島 壮")
+// #title(date:datetime(year:2025,month:8,day:8),id:"電21-065", name:"木村 駿太")
+#title(date:datetime(year:2025,month:8,day:27),id:"電22-113", name:"中島 壮")
 //#title(date:datetime(year:2025,month:4,day:1))
 
 
 = はじめに
-今回は各回転数ごとの回生前と停止後のエネルギーの割合を解析によって求める。
+今回は各回転数ごとの回生前と停止後のダイオード損及び発電用モータの固定子抵抗損を解析により求める。
 
 = 解析方法
 初期回転数を$N_0$ = 500 - 3000 rpmと変化させ、@exp:calcW より初期エネルギー$W_0$, 機械損エネルギー$W_"m"$, ジュール熱$W_"joule"$, EDLCの充電エネルギー$W_"EDLC"$, その他のエネルギー$W_"other"$とその割合を求める。またEDLCの静電容量を$C$=0.0556 F, 内部抵抗を$R_"EDLC"$=4.5 #unit.Ohm, 保護抵抗を$R_"p"$ = 10 #unit.Ohm とする。
@@ -44,12 +44,16 @@ $<exp:calcW>
         table.hline(),
     ), cap:"実験装置諸元"
 )
+
+#img("graph/circuit.png", cap:"解析回路図")
 #pb
 = 解析結果
 @chart に各回転数ごとのエネルギーの割合を、@EnergyRatePlot に回転数ごとのエネルギーの割合およびダイオード損の変化を示す。前回の輪講の「その他のエネルギー」の内訳はダイオードとモータ内の固定子抵抗によるものがほとんどであり、いずれにも該当しないものはいずれの回転数においても全体の0.01%以下であった。これは解析の際に解析ステップ幅などにより生じた誤差であると考えられる。
-#imgN(("\graph\chart\1000.svg", "\graph\chart\2000.svg", "\graph\chart\3000.svg"), ([(a) $N_0$=1000 rpm], [(b) $N_0$=2000 rpm], [(c) $N_0$=3000 rpm]), cap:"各回転数ごとのエネルギーの割合", lab:<chart>, w:7.5cm)
 
-#imgN(("graph/N/EnergyRate.svg", "\graph\N\Dloss.svg"), ([(a) エネルギーの割合], [(b) ダイオード損の変化]), cap:"回転数による変化", lab:<EnergyRatePlot>, w:7.5cm)
+ダイオード損の割合は回転数が増加するごとに減少している。これは回転数が増加数ごとに電流が流れている時間の割合が減少しているためと考えられる。
+#imgN(("\graph\pie\1000.png", "\graph\pie\2000.png", "\graph\pie\3000.png"), ([(a) $N_0$=1000 rpm], [(b) $N_0$=2000 rpm], [(c) $N_0$=3000 rpm]), cap:"各回転数ごとのエネルギーの割合", lab:<chart>, w:7.5cm)
+
+#imgN(("\graph\N\DlossRate.svg","\graph\N\Dloss.svg", "\graph\N\MotorRate.svg", "\graph\N\MotorLoss.svg", "\graph\N\EnergyRate.svg"), ([(a) ダイオード損の割合], [(b) ダイオード損の変化], [(c) 固定子抵抗損の割合], [(d) 固定子抵抗損の変化], [(e) エネルギーの割合]), cap:"回転数による変化", lab:<EnergyRatePlot>, w:7.5cm)
 
 #pb
 = 補足資料
@@ -58,3 +62,4 @@ $<exp:calcW>
     ([(a) 回転数], [(b) 電流], [(c) 機械損], [(d) ジュール損], [(e) 回生エネルギー], [(f) トルク], [(g) 回生トルク], [(h) 機械トルク]),
     cap:"各回転数ごとの時間変化", lab:<NIMRTE>, w:92%
 )
+#imgN(("graph/diode.png","graph/rect.png", "graph/pmeter.png"), ("(a) ダイオード損測定", "(b) 整流回路損失測定", "(c) 固定子抵抗損測定"), cap:"各損失測定回路", w:6.95cm)
