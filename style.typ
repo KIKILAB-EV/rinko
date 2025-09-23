@@ -74,16 +74,19 @@
 // - place: 画像の配置 
 #let img(path, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
 	set align(center)
-	let captioon = []
+	let caption = []
 	if (cap != none){
-		captioon = [#std.h(0.5em)#cap]
+		caption = [#std.h(0.5em)#cap]
+	}
+	if(bib != none){
+		caption = [#caption #bib]
 	}
 
 	v(1em)
 	[
 		#figure(
 			image(path, width: w, height: h),
-			caption: captioon,
+			caption: caption,
 			supplement: [図],
 			numbering: "1",
 			kind: "image",
@@ -92,6 +95,7 @@
 		#if (lab != none) {
 			lab	
 		}
+		
 	]
 	v(1em)
 
@@ -110,10 +114,14 @@
 // - place: 画像の配置 
 #let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
 	set align(center)
-	let captioon = []
+	let caption = []
 	if (cap != none){
-		captioon = [#std.h(0.5em)#cap]
+		caption = [#std.h(0.5em)#cap]
 	}
+	if(bib != none){
+		caption = [#caption #bib]
+	}
+
 	let ary = array(())
 	for i in range(imgs.len()) {
 		if (i == imgs.len() -1 and calc.odd(imgs.len())){
@@ -130,7 +138,7 @@
 					..ary.map((i) => i).flatten(),
 					align: center+horizon,
 				),
-				caption: captioon,
+				caption: caption,
 				supplement: [図],
 				numbering: "1",
 				kind: "image",
@@ -156,14 +164,17 @@
 // 	- bib: 参考文献
 //  - place: 表の配置
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
-	let captioon = []
+	let caption = []
 	if (cap != none){
-		captioon = [#std.h(0.5em)#cap]
+		caption = [#std.h(0.5em)#cap]
+	}
+	if(bib != none){
+		caption = [#caption #bib]
 	}
 	v(1em)
 	[#figure(
 		body,
-		caption: captioon,
+		caption: caption,
 		supplement: [表],
 		numbering: "1",
 		kind: "table",
@@ -171,9 +182,6 @@
 	)
 	#if (lab != none) {
 		lab	
-	}
-	#if (bib != none) {
-		bib
 	}
 	]
 	v(1em)
@@ -216,6 +224,11 @@
 				let num = numbering(el.numbering, ..counter(heading).at(loc)).at(0)
 				link(el.location(), "第" + str(num) + "節")
 			} 
+			else if el.func() == figure{
+				let loc = el.location()
+				let num = numbering(el.numbering, ..counter(figure).at(loc)).at(0)
+				link(el.location(), el.supplement + str(num))
+			}
 			else{
 				it
 			}
@@ -224,20 +237,38 @@
 	show figure.where(
 		kind: "table"
 	): it => {
-		place(center+it.placement, [
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-			#it.body
-		], float: true)
+		if(it.placement == none){
+			[
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			]
+		}
+		else{
+			place(center+it.placement, [
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			], float: true)
+		}
 	}
 	show figure.where(
 		kind: "image"
 	): it => {
-		place(center+it.placement, [
-			#it.body
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-		], float: true)
+		if(it.placement == none){
+			[
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			]
+		}
+		else{
+			place(center+it.placement, [
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			], float: true)
+		}
 	}
 	
 	show: remove-cjk-break-space
