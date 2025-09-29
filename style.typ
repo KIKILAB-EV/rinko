@@ -73,6 +73,7 @@
 // - bib: 参考文献
 // - place: 画像の配置 
 #let img(path, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
+	counter("image").step()
 	set align(center)
 	let caption = []
 	if (cap != none){
@@ -113,6 +114,7 @@
 // - bib: 参考文献
 // - place: 画像の配置 
 #let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
+	counter("image").step()
 	set align(center)
 	let caption = []
 	if (cap != none){
@@ -164,6 +166,7 @@
 // 	- bib: 参考文献
 //  - place: 表の配置
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
+	counter("table").step()
 	let caption = []
 	if (cap != none){
 		caption = [#std.h(0.5em)#cap]
@@ -185,6 +188,7 @@
 	}
 	]
 	v(1em)
+	
 }
 
 
@@ -225,9 +229,11 @@
 				link(el.location(), "第" + str(num) + "節")
 			} 
 			else if el.func() == figure{
+				
 				let loc = el.location()
-				let num = numbering(el.numbering, ..counter(figure).at(loc)).at(0)
+				let num = numbering(el.numbering, ..counter(el.kind).at(loc)).at(0)
 				link(el.location(), el.supplement + str(num))
+			
 			}
 			else{
 				it
@@ -237,6 +243,7 @@
 	show figure.where(
 		kind: "table"
 	): it => {
+		
 		if(it.placement == none){
 			[
 				#set figure.caption(position: top, separator: none)
