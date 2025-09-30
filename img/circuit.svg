@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg version="1.1" width="682.65491" height="408.39621" id="svg102" sodipodi:docname="circuit.svg" inkscape:version="1.4 (86a8ad7, 2024-10-11)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="1.0597137" inkscape:cx="-15.098418" inkscape:cy="237.32825" inkscape:window-width="1920" inkscape:window-height="1027" inkscape:window-x="1912" inkscape:window-y="22" inkscape:window-maximized="1" inkscape:current-layer="svg102" />
+<svg
+   version="1.1"
+   width="682.65491"
+   height="408.39621"
+   id="svg102"
+   sodipodi:docname="circuit.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0597137"
+     inkscape:cx="286.39811"
+     inkscape:cy="220.34253"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g32" />
   <xhtml:style>
         
  .M athJax_Hover_Frame {
@@ -1879,121 +1907,1080 @@
  }
 
     </xhtml:style>
-  <defs id="defs1">
-    <marker style="overflow:visible" id="ArrowWideRounded" refX="0" refY="0" orient="auto-start-reverse" markerWidth="1" markerHeight="1" viewBox="0 0 1 1" preserveAspectRatio="xMidYMid">
-      <path style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round" d="M 3,-3 0,0 3,3" transform="rotate(180,0.125,0)" id="path2" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowWideRounded"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         id="path2" />
     </marker>
-    <marker style="overflow:visible" id="ArrowWideRounded-9" refX="0" refY="0" orient="auto-start-reverse" markerWidth="1" markerHeight="1" viewBox="0 0 1 1" preserveAspectRatio="xMidYMid">
-      <path style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round" d="M 3,-3 0,0 3,3" transform="rotate(180,0.125,0)" id="path2-4" />
+    <marker
+       style="overflow:visible"
+       id="ArrowWideRounded-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         id="path2-4" />
     </marker>
   </defs>
-  <path d="M 40.975296,206.12112 C 40.465296,195.17112 31.245296,186.68112 20.295296,187.06112 9.3552957,187.45112 0.75530266,196.56112 1.0053027,207.51112 1.2553027,218.46112 10.275296,227.17112 21.225296,227.05112 32.185296,226.92112 40.995296,218.01112 40.995296,207.05112" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path3" />
-  <path d="M 41.015296,207.12112 H 182.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path8" sodipodi:nodetypes="cc" />
-  <path d="M 37.945296,195.12112 54.870486,187.12112 H 142.9453 V 157.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path9" sodipodi:nodetypes="cccc" />
-  <path d="M 37.945296,219.12112 54.889016,227.12112 H 220.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path10" sodipodi:nodetypes="ccc" />
-  <path d="M 142.8053,119.66112 C 142.8053,119.66112 142.8053,119.66112 134.9453,134.38112 150.6653,134.38112 150.6653,134.38112 150.6653,134.38112 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path12" />
-  <path d="M 142.9453,98.121118 V 158.66207" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path13" sodipodi:nodetypes="cc" />
-  <path d="M 134.9453,119.12112 H 150.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path14" />
-  <path d="M 182.8053,119.66112 C 182.8053,119.66112 182.8053,119.66112 174.9453,134.38112 190.6653,134.38112 190.6653,134.38112 190.6653,134.38112 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path15" />
-  <path d="M 182.9453,98.121118 V 156.62112 247.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path16" sodipodi:nodetypes="ccc" />
-  <path d="M 174.9453,119.12112 H 190.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path17" />
-  <path d="M 222.8053,119.66112 C 222.8053,119.66112 222.8053,119.66112 214.9453,134.38112 230.6653,134.38112 230.6653,134.38112 230.6653,134.38112 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path18" />
-  <path d="M 222.9453,98.121118 V 156.62112 247.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path19" />
-  <path d="M 214.9453,119.12112 H 230.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path20" />
-  <path d="M 142.8053,269.66112 C 142.8053,269.66112 142.8053,269.66112 134.9453,284.38112 150.6653,284.38112 150.6653,284.38112 150.6653,284.38112 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path21" />
-  <path d="M 142.9453,248.12112 V 306.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path22" sodipodi:nodetypes="cc" />
-  <path d="M 134.9453,269.12112 H 150.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path23" />
-  <path d="M 182.8053,269.66112 C 182.8053,269.66112 182.8053,269.66112 174.9453,284.38112 190.6653,284.38112 190.6653,284.38112 190.6653,284.38112 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path24" />
-  <path d="M 182.9453,248.12112 V 306.62112 365.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path25" />
-  <path d="M 174.9453,269.12112 H 190.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path26" />
-  <path d="M 222.8053,269.66112 C 222.8053,269.66112 222.8053,269.66112 214.9453,284.38112 230.6653,284.38112 230.6653,284.38112 230.6653,284.38112 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path27" />
-  <path d="M 222.9453,248.12112 V 306.62112 365.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path28" />
-  <path d="M 214.9453,269.12112 H 230.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path29" />
-  <path d="M 142.9453,247.12112 V 189.12112" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none" id="path31" />
-  <circle cx="142.9453" cy="187.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse31" r="2" />
-  <circle cx="182.9453" cy="207.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse34" r="2" />
-  <circle cx="222.94531" cy="227.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse35" r="2" />
-  <rect x="36.121117" y="-593.94531" width="2" height="2" fill="#000000" stroke="none" transform="rotate(90)" pointer-events="none" id="rect35" />
-  <rect x="36.121117" y="-493.94534" width="2" height="2" fill="#000000" stroke="none" transform="rotate(90)" pointer-events="none" id="rect36" />
-  <path d="M 530.4053,36.981118 C 530.4053,36.981118 530.4053,36.981118 515.6853,29.121118 515.6853,44.841118 515.6853,44.841118 515.6853,44.841118 Z" fill="#000000" stroke="#000000" stroke-width="1.49" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path36" />
-  <path d="M 596.03703,37.121118 H 493.4453 412.4453 403.9453" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path37" />
-  <path d="M 530.9453,29.121118 V 45.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path38" />
-  <rect x="36.121117" y="-413.94531" width="2" height="2" fill="#000000" stroke="none" transform="rotate(90)" pointer-events="none" id="rect38" />
-  <path d="M 392.9453,35.261118 C 392.9353,32.231118 395.1653,29.771118 397.9353,29.761118 400.6953,29.751118 402.9353,32.201118 402.9453,35.221118 402.9453,35.231118 402.9453,35.231118 402.9453,35.241118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path39" />
-  <path d="M 402.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path40" />
-  <path d="M 392.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path41" />
-  <path d="M 382.9453,35.261118 C 382.9353,32.231118 385.1653,29.771118 387.9353,29.761118 390.6953,29.751118 392.9353,32.201118 392.9453,35.221118 392.9453,35.231118 392.9453,35.231118 392.9453,35.241118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path42" />
-  <path d="M 392.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path43" />
-  <path d="M 382.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path44" />
-  <path d="M 372.9453,35.261118 C 372.9353,32.231118 375.1653,29.771118 377.9353,29.761118 380.6953,29.751118 382.9353,32.201118 382.9453,35.221118 382.9453,35.231118 382.9453,35.231118 382.9453,35.241118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path45" />
-  <path d="M 382.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path46" />
-  <path d="M 372.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path47" />
-  <path d="M 362.9453,35.261118 C 362.9353,32.231118 365.1653,29.771118 367.9353,29.761118 370.6953,29.751118 372.9353,32.201118 372.9453,35.221118 372.9453,35.231118 372.9453,35.231118 372.9453,35.241118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path48" />
-  <path d="M 372.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path49" />
-  <path d="M 362.9453,35.121118 V 37.121118" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path50" />
-  <path d="M 361.9453,37.121118 H 353.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path52" />
-  <rect x="411.94531" y="236.12112" width="2" height="2" fill="#000000" stroke="none" pointer-events="none" id="rect54" />
-  <path d="M 452.9453,201.62112 V 187.62112 39.121118" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path54" />
-  <path d="M 452.9453,236.12112 V 246.62112 365.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path55" />
-  <path d="M 452.9453,202.12112 H 437.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path56" />
-  <path d="M 452.9453,232.12112 H 437.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path57" />
-  <path d="M 437.9453,212.12112 V 222.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path58" />
-  <path d="M 437.9453,227.12112 V 237.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path59" />
-  <path d="M 437.9453,207.12112 V 197.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path60" />
-  <path d="M 444.9453,217.12112 H 452.9453 V 236.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path61" />
-  <circle cx="452.94531" cy="232.12112" fill="none" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse61" r="2.0000031" />
-  <path d="M 413.9453,237.12112 H 428.9453" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path62" />
-  <path d="M 429.9453,202.12112 V 232.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path63" />
-  <path d="M 429.9453,197.12112 V 237.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path64" />
-  <path d="M 445.3353,213.12112 439.3353,217.12112 445.3353,221.12112 Z" fill="#000000" stroke="#000000" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path65" />
-  <rect x="601.94531" y="336.12112" width="2" height="2" fill="#000000" stroke="none" pointer-events="none" id="rect67" />
-  <path d="M 642.9453,336.12112 V 346.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path68" />
-  <path d="M 642.9453,302.12112 H 627.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path69" />
-  <path d="M 642.9453,332.12112 H 627.9453" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path70" />
-  <path d="M 627.9453,312.12112 V 322.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path71" />
-  <path d="M 627.9453,327.12112 V 337.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path72" />
-  <path d="M 627.9453,307.12112 V 297.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path73" />
-  <path d="M 634.9453,317.12112 H 642.9453 V 336.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path74" />
-  <circle cx="642.94531" cy="332.12112" fill="none" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse74" r="2.0000031" />
-  <path d="M 603.9453,337.12112 H 618.9453" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path75" />
-  <path d="M 619.9453,302.12112 V 332.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path76" />
-  <path d="M 619.9453,297.12112 V 337.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path77" />
-  <path d="M 635.3353,313.12112 629.3353,317.12112 635.3353,321.12112 Z" fill="#000000" stroke="#000000" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path78" />
-  <path d="M 631.9453,153.12112 C 653.9453,153.12112 653.9453,153.12112 653.9453,153.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path81" />
-  <path d="M 631.9453,161.12112 C 653.9453,161.12112 653.9453,161.12112 653.9453,161.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path82" />
-  <path d="M 642.9453,162.12112 V 186.62112 227.12112" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path84" />
-  <path d="M 642.9453,62.945337 V 78.121118" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path86" />
-  <path d="M 642.9453,116.12112 V 127.12112 152.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path87" />
-  <path d="M 635.9453,79.121118 C 649.3353,78.941118 649.9453,79.121118 649.9453,79.121118 V 115.12112 H 635.9453 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path88" />
-  <path d="M 642.9453,228.12112 V 238.12112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path89" />
-  <path d="M 642.9453,276.12112 V 287.12112 301.62112" fill="#000000" stroke="#000000" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" pointer-events="none" id="path90" />
-  <path d="M 635.9453,239.12112 C 649.3353,238.94112 649.9453,239.12112 649.9453,239.12112 V 275.12112 H 635.9453 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="10" pointer-events="none" id="path91" />
-  <path d="M 142.9453,306.8618 V 367.12112 H 642.94926 V 342.63265" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none" id="path92" sodipodi:nodetypes="cccc" />
-  <circle cx="182.9453" cy="367.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse93" r="2" />
-  <circle cx="222.94531" cy="367.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse94" r="2" />
-  <circle cx="293.17828" cy="367.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse94-7" r="2" />
-  <path d="M 142.9453,97.121118 V 37.121118 H 353.35941" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none" id="path95" sodipodi:nodetypes="ccc" />
-  <path d="M 182.9453,97.121118 V 39.121118" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none" id="path96" />
-  <circle cx="182.9453" cy="37.121117" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse96" r="2" />
-  <path d="M 222.9453,97.121118 V 39.121118" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none" id="path97" />
-  <circle cx="222.94531" cy="37.121117" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse97" r="2" />
-  <circle cx="452.94531" cy="37.121117" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse99" r="2" />
-  <circle cx="452.94531" cy="367.12112" fill="#000000" stroke="#000000" stroke-width="2" pointer-events="none" id="ellipse100" r="2" />
-  <path d="M 592.9453,37.121118 H 642.9453 V 67.121118" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="none" id="path102" />
-  <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:1.00157;paint-order:stroke fill markers" x="11.202746" y="218.13635" id="text102"><tspan id="tspan8" x="11.202746" y="218.13635" style="font-size:13.3333px;line-height:14.6736px"><tspan id="tspan102" x="11.202746" y="218.13635" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial" dy="-12.79">PM</tspan></tspan><tspan id="tspan9" x="11.202746" y="218.13635" style="font-size:13.3333px;line-height:14.6736px"><tspan x="11.202746" y="218.13635" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial" id="tspan10">SM</tspan></tspan></text>
-  <rect style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:16, 8;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" id="rect102" width="122.63884" height="365.15439" x="121.60714" y="22.059937" ry="7.7339807" />
-  <rect style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:16, 8;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" id="rect102-8" width="203.10759" height="365.15439" x="351.39148" y="22.058619" ry="7.7339807" />
-  <rect style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:16, 8;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" id="rect102-2" width="76.93573" height="128.43564" x="604.71094" y="60.152367" ry="7.7339807" />
-  <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:20.543px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:12, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" x="147.8541" y="13.589869" id="text105"><tspan id="tspan105" x="147.8541" y="13.589869" style="font-size:18.6667px;line-height:20.543px">Rectifier</tspan></text>
-  <text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:20.543px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:12, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" x="409.27271" y="13.471378" id="text106"><tspan id="tspan106" x="409.27271" y="13.471378" style="font-size:18.6667px;line-height:20.543px">Boost Unit</tspan></text>
-  <text xml:space="preserve" style="font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;paint-order:stroke fill markers" x="87.942757" y="185.07358" id="text1"><tspan sodipodi:role="line" id="tspan1" x="87.942757" y="185.07358" style="font-size:13.3333px;line-height:14.6736px;stroke:none">U</tspan></text>
-  <text xml:space="preserve" style="font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;paint-order:stroke fill markers" x="87.942757" y="204.44936" id="text1-8"><tspan sodipodi:role="line" id="tspan1-2" x="87.942757" y="204.44936" style="font-size:13.3333px;line-height:14.6736px;stroke:none">V</tspan></text>
-  <text xml:space="preserve" style="font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;paint-order:stroke fill markers" x="87.942757" y="224.88438" id="text1-5"><tspan sodipodi:role="line" id="tspan1-1" x="87.942757" y="224.88438" style="font-size:13.3333px;line-height:14.6736px;stroke:none">W</tspan></text>
-  <path style="fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#ArrowWideRounded-9);paint-order:stroke fill markers" d="M 276.85966,358.11875 V 58.037701" id="path1" />
-  <text xml:space="preserve" style="font-size:24px;line-height:26.4124px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers" x="303.07751" y="211.18518" id="text2"><tspan sodipodi:role="line" id="tspan2" x="303.07751" y="211.18518" style="font-size:24px;line-height:26.4124px;stroke:none">V<tspan style="font-size:16px;baseline-shift:sub" id="tspan3">rec</tspan></tspan></text>
-  <path style="fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:8, 4, 2, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" d="M 330.94056,20.089963 V 385.89533" id="path4" sodipodi:nodetypes="cc" />
-  <circle style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" id="path5" cx="330.94055" cy="37.121117" r="3.8925607" />
-  <circle style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" id="path5-1" cx="330.94055" cy="367.12112" r="3.8925607" />
-  <path style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" d="M 292.60331,407.39626 303.88719,394.1523 H 282.46938 Z" id="path6" />
-  <path style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" d="M 293.17828,394.43531 V 367.66142" id="path7" />
+  <path
+     d="M 40.975296,206.12112 C 40.465296,195.17112 31.245296,186.68112 20.295296,187.06112 9.3552957,187.45112 0.75530266,196.56112 1.0053027,207.51112 1.2553027,218.46112 10.275296,227.17112 21.225296,227.05112 32.185296,226.92112 40.995296,218.01112 40.995296,207.05112"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path3" />
+  <path
+     d="M 41.015296,207.12112 H 182.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path8"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 37.945296,195.12112 54.870486,187.12112 H 142.9453 V 157.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path9"
+     sodipodi:nodetypes="cccc" />
+  <path
+     d="M 37.945296,219.12112 54.889016,227.12112 H 220.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path10"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 142.8053,119.66112 C 142.8053,119.66112 142.8053,119.66112 134.9453,134.38112 150.6653,134.38112 150.6653,134.38112 150.6653,134.38112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path12" />
+  <path
+     d="M 142.9453,98.121118 V 158.66207"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path13"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 134.9453,119.12112 H 150.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path14" />
+  <path
+     d="M 182.8053,119.66112 C 182.8053,119.66112 182.8053,119.66112 174.9453,134.38112 190.6653,134.38112 190.6653,134.38112 190.6653,134.38112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path15" />
+  <path
+     d="M 182.9453,98.121118 V 156.62112 247.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path16"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 174.9453,119.12112 H 190.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path17" />
+  <path
+     d="M 222.8053,119.66112 C 222.8053,119.66112 222.8053,119.66112 214.9453,134.38112 230.6653,134.38112 230.6653,134.38112 230.6653,134.38112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path18" />
+  <path
+     d="M 222.9453,98.121118 V 156.62112 247.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path19" />
+  <path
+     d="M 214.9453,119.12112 H 230.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path20" />
+  <path
+     d="M 142.8053,269.66112 C 142.8053,269.66112 142.8053,269.66112 134.9453,284.38112 150.6653,284.38112 150.6653,284.38112 150.6653,284.38112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path21" />
+  <path
+     d="M 142.9453,248.12112 V 306.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path22"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 134.9453,269.12112 H 150.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path23" />
+  <path
+     d="M 182.8053,269.66112 C 182.8053,269.66112 182.8053,269.66112 174.9453,284.38112 190.6653,284.38112 190.6653,284.38112 190.6653,284.38112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path24" />
+  <path
+     d="M 182.9453,248.12112 V 306.62112 365.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path25" />
+  <path
+     d="M 174.9453,269.12112 H 190.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path26" />
+  <path
+     d="M 222.8053,269.66112 C 222.8053,269.66112 222.8053,269.66112 214.9453,284.38112 230.6653,284.38112 230.6653,284.38112 230.6653,284.38112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path27" />
+  <path
+     d="M 222.9453,248.12112 V 306.62112 365.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path28" />
+  <path
+     d="M 214.9453,269.12112 H 230.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path29" />
+  <path
+     d="M 142.9453,247.12112 V 189.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path31" />
+  <circle
+     cx="142.9453"
+     cy="187.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse31"
+     r="2" />
+  <circle
+     cx="182.9453"
+     cy="207.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse34"
+     r="2" />
+  <circle
+     cx="222.94531"
+     cy="227.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse35"
+     r="2" />
+  <rect
+     x="36.121117"
+     y="-593.94531"
+     width="2"
+     height="2"
+     fill="#000000"
+     stroke="none"
+     transform="rotate(90)"
+     pointer-events="none"
+     id="rect35" />
+  <rect
+     x="36.121117"
+     y="-493.94534"
+     width="2"
+     height="2"
+     fill="#000000"
+     stroke="none"
+     transform="rotate(90)"
+     pointer-events="none"
+     id="rect36" />
+  <path
+     d="M 530.4053,36.981118 C 530.4053,36.981118 530.4053,36.981118 515.6853,29.121118 515.6853,44.841118 515.6853,44.841118 515.6853,44.841118 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="1.49"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path36" />
+  <path
+     d="M 596.03703,37.121118 H 493.4453 412.4453 403.9453"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path37" />
+  <path
+     d="M 530.9453,29.121118 V 45.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path38" />
+  <rect
+     x="36.121117"
+     y="-413.94531"
+     width="2"
+     height="2"
+     fill="#000000"
+     stroke="none"
+     transform="rotate(90)"
+     pointer-events="none"
+     id="rect38" />
+  <path
+     d="M 392.9453,35.261118 C 392.9353,32.231118 395.1653,29.771118 397.9353,29.761118 400.6953,29.751118 402.9353,32.201118 402.9453,35.221118 402.9453,35.231118 402.9453,35.231118 402.9453,35.241118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path39" />
+  <path
+     d="M 402.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path40" />
+  <path
+     d="M 392.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path41" />
+  <path
+     d="M 382.9453,35.261118 C 382.9353,32.231118 385.1653,29.771118 387.9353,29.761118 390.6953,29.751118 392.9353,32.201118 392.9453,35.221118 392.9453,35.231118 392.9453,35.231118 392.9453,35.241118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path42" />
+  <path
+     d="M 392.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path43" />
+  <path
+     d="M 382.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path44" />
+  <path
+     d="M 372.9453,35.261118 C 372.9353,32.231118 375.1653,29.771118 377.9353,29.761118 380.6953,29.751118 382.9353,32.201118 382.9453,35.221118 382.9453,35.231118 382.9453,35.231118 382.9453,35.241118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path45" />
+  <path
+     d="M 382.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path46" />
+  <path
+     d="M 372.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path47" />
+  <path
+     d="M 362.9453,35.261118 C 362.9353,32.231118 365.1653,29.771118 367.9353,29.761118 370.6953,29.751118 372.9353,32.201118 372.9453,35.221118 372.9453,35.231118 372.9453,35.231118 372.9453,35.241118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path48" />
+  <path
+     d="M 372.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path49" />
+  <path
+     d="M 362.9453,35.121118 V 37.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path50" />
+  <path
+     d="M 361.9453,37.121118 H 353.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path52" />
+  <rect
+     x="411.94531"
+     y="236.12112"
+     width="2"
+     height="2"
+     fill="#000000"
+     stroke="none"
+     pointer-events="none"
+     id="rect54" />
+  <path
+     d="M 452.9453,201.62112 V 187.62112 39.121118"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path54" />
+  <path
+     d="M 452.9453,236.12112 V 246.62112 365.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path55" />
+  <path
+     d="M 452.9453,202.12112 H 437.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path56" />
+  <path
+     d="M 452.9453,232.12112 H 437.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path57" />
+  <path
+     d="M 437.9453,212.12112 V 222.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path58" />
+  <path
+     d="M 437.9453,227.12112 V 237.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path59" />
+  <path
+     d="M 437.9453,207.12112 V 197.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path60" />
+  <path
+     d="M 444.9453,217.12112 H 452.9453 V 236.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path61" />
+  <circle
+     cx="452.94531"
+     cy="232.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse61"
+     r="2.0000031" />
+  <path
+     d="M 413.9453,237.12112 H 428.9453"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path62" />
+  <path
+     d="M 429.9453,202.12112 V 232.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path63" />
+  <path
+     d="M 429.9453,197.12112 V 237.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path64" />
+  <path
+     d="M 445.3353,213.12112 439.3353,217.12112 445.3353,221.12112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path65" />
+  <rect
+     x="601.94531"
+     y="336.12112"
+     width="2"
+     height="2"
+     fill="#000000"
+     stroke="none"
+     pointer-events="none"
+     id="rect67" />
+  <path
+     d="M 642.9453,336.12112 V 346.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path68" />
+  <path
+     d="M 642.9453,302.12112 H 627.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path69" />
+  <path
+     d="M 642.9453,332.12112 H 627.9453"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path70" />
+  <path
+     d="M 627.9453,312.12112 V 322.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path71" />
+  <path
+     d="M 627.9453,327.12112 V 337.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path72" />
+  <path
+     d="M 627.9453,307.12112 V 297.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path73" />
+  <path
+     d="M 634.9453,317.12112 H 642.9453 V 336.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path74" />
+  <circle
+     cx="642.94531"
+     cy="332.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse74"
+     r="2.0000031" />
+  <path
+     d="M 603.9453,337.12112 H 618.9453"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path75" />
+  <path
+     d="M 619.9453,302.12112 V 332.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path76" />
+  <path
+     d="M 619.9453,297.12112 V 337.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path77" />
+  <path
+     d="M 635.3353,313.12112 629.3353,317.12112 635.3353,321.12112 Z"
+     fill="#000000"
+     stroke="#000000"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path78" />
+  <path
+     d="M 631.9453,153.12112 C 653.9453,153.12112 653.9453,153.12112 653.9453,153.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path81" />
+  <path
+     d="M 631.9453,161.12112 C 653.9453,161.12112 653.9453,161.12112 653.9453,161.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path82" />
+  <path
+     d="M 642.9453,162.12112 V 186.62112 227.12112"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path84" />
+  <path
+     d="M 642.9453,62.945337 V 78.121118"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path86" />
+  <path
+     d="M 642.9453,116.12112 V 127.12112 152.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path87" />
+  <path
+     d="M 635.9453,79.121118 C 649.3353,78.941118 649.9453,79.121118 649.9453,79.121118 V 115.12112 H 635.9453 Z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path88" />
+  <path
+     d="M 642.9453,228.12112 V 238.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path89" />
+  <path
+     d="M 642.9453,276.12112 V 287.12112 301.62112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path90" />
+  <path
+     d="M 635.9453,239.12112 C 649.3353,238.94112 649.9453,239.12112 649.9453,239.12112 V 275.12112 H 635.9453 Z"
+     fill="#ffffff"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-linejoin="round"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path91" />
+  <path
+     d="M 142.9453,306.8618 V 367.12112 H 642.94926 V 342.63265"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path92"
+     sodipodi:nodetypes="cccc" />
+  <circle
+     cx="182.9453"
+     cy="367.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse93"
+     r="2" />
+  <circle
+     cx="222.94531"
+     cy="367.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse94"
+     r="2" />
+  <circle
+     cx="293.17828"
+     cy="367.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse94-7"
+     r="2" />
+  <path
+     d="M 142.9453,97.121118 V 37.121118 H 353.35941"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path95"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 182.9453,97.121118 V 39.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path96" />
+  <circle
+     cx="182.9453"
+     cy="37.121117"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse96"
+     r="2" />
+  <path
+     d="M 222.9453,97.121118 V 39.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path97" />
+  <circle
+     cx="222.94531"
+     cy="37.121117"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse97"
+     r="2" />
+  <circle
+     cx="452.94531"
+     cy="37.121117"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse99"
+     r="2" />
+  <circle
+     cx="452.94531"
+     cy="367.12112"
+     fill="#000000"
+     stroke="#000000"
+     stroke-width="2"
+     pointer-events="none"
+     id="ellipse100"
+     r="2" />
+  <path
+     d="M 592.9453,37.121118 H 642.9453 V 67.121118"
+     fill="none"
+     stroke="#000000"
+     stroke-width="2"
+     stroke-miterlimit="10"
+     pointer-events="none"
+     id="path102" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:1.00157;paint-order:stroke fill markers"
+     x="11.202746"
+     y="218.13635"
+     id="text102"><tspan
+       id="tspan8"
+       x="11.202746"
+       y="218.13635"
+       style="font-size:13.3333px;line-height:14.6736px"><tspan
+         id="tspan102"
+         x="11.202746"
+         y="218.13635"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial"
+         dy="-12.79">PM</tspan></tspan><tspan
+       id="tspan9"
+       x="11.202746"
+       y="218.13635"
+       style="font-size:13.3333px;line-height:14.6736px"><tspan
+         x="11.202746"
+         y="218.13635"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial"
+         id="tspan10">SM</tspan></tspan></text>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:16, 8;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect102"
+     width="122.63884"
+     height="365.15439"
+     x="121.60714"
+     y="22.059937"
+     ry="7.7339807" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:16, 8;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect102-8"
+     width="203.10759"
+     height="365.15439"
+     x="351.39148"
+     y="22.058619"
+     ry="7.7339807" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:16, 8;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     id="rect102-2"
+     width="76.93573"
+     height="128.43564"
+     x="604.71094"
+     y="60.152367"
+     ry="7.7339807" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:20.543px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:12, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     x="147.8541"
+     y="13.589869"
+     id="text105"><tspan
+       id="tspan105"
+       x="147.8541"
+       y="13.589869"
+       style="font-size:18.6667px;line-height:20.543px">Rectifier</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:20.543px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;stroke-dasharray:12, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     x="409.27271"
+     y="13.471378"
+     id="text106"><tspan
+       id="tspan106"
+       x="409.27271"
+       y="13.471378"
+       style="font-size:18.6667px;line-height:20.543px">Boost Unit</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;paint-order:stroke fill markers"
+     x="87.942757"
+     y="185.07358"
+     id="text1"><tspan
+       sodipodi:role="line"
+       id="tspan1"
+       x="87.942757"
+       y="185.07358"
+       style="font-size:13.3333px;line-height:14.6736px;stroke:none">U</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;paint-order:stroke fill markers"
+     x="87.942757"
+     y="204.44936"
+     id="text1-8"><tspan
+       sodipodi:role="line"
+       id="tspan1-2"
+       x="87.942757"
+       y="204.44936"
+       style="font-size:13.3333px;line-height:14.6736px;stroke:none">V</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:13.3333px;line-height:14.6736px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;paint-order:stroke fill markers"
+     x="87.942757"
+     y="224.88438"
+     id="text1-5"><tspan
+       sodipodi:role="line"
+       id="tspan1-1"
+       x="87.942757"
+       y="224.88438"
+       style="font-size:13.3333px;line-height:14.6736px;stroke:none">W</tspan></text>
+  <path
+     style="fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-opacity:1;marker-end:url(#ArrowWideRounded-9);paint-order:stroke fill markers"
+     d="M 276.85966,358.11875 V 58.037701"
+     id="path1" />
+  <text
+     xml:space="preserve"
+     style="font-size:24px;line-height:26.4124px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers"
+     x="303.07751"
+     y="211.18518"
+     id="text2"><tspan
+       sodipodi:role="line"
+       id="tspan2"
+       x="303.07751"
+       y="211.18518"
+       style="font-size:24px;line-height:26.4124px;stroke:none">V<tspan
+   style="font-size:16px;baseline-shift:sub"
+   id="tspan3">rec</tspan></tspan></text>
+  <path
+     style="fill:#000000;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:8, 4, 2, 4;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 330.94056,20.089963 V 385.89533"
+     id="path4"
+     sodipodi:nodetypes="cc" />
+  <circle
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path5"
+     cx="330.94055"
+     cy="37.121117"
+     r="3.8925607" />
+  <circle
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     id="path5-1"
+     cx="330.94055"
+     cy="367.12112"
+     r="3.8925607" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 292.60331,407.39626 303.88719,394.1523 H 282.46938 Z"
+     id="path6" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+     d="M 293.17828,394.43531 V 367.66142"
+     id="path7" />
+  <g
+     id="g32"
+     transform="translate(0,15.29632)">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       d="M 20.997648,384.41793 V 211.51364"
+       id="path7-8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="M 11.030421,383.84252 H 30.964875"
+       id="path11" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="M 15.284217,387.9712 H 26.71108"
+       id="path30" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2"
+       d="M 17.536226,392.09989 H 24.45907"
+       id="path32" />
+  </g>
 </svg>
