@@ -63,4 +63,20 @@ plt.tight_layout()
 plt.savefig('A.svg', format='svg', dpi=300, bbox_inches='tight')
 print("FFTグラフをA.svgとして保存しました")
 
-plt.show()
+
+# 元の波形のグラフを作成
+plt.figure(figsize=(6, 4))
+
+plt.plot(time1A, voltage1A, label='接続', alpha=0.8)
+plt.plot(time2A, voltage2A, label='開放', alpha=0.8)
+plt.xlabel('Time (s)')
+plt.ylabel('Voltage (V)')
+plt.legend()
+plt.grid(True)
+plt.grid(True, which='major', alpha=0.7)
+
+plt.tight_layout()
+
+# SVGファイルとして保存
+plt.savefig('wav.svg', format='svg', dpi=300, bbox_inches='tight')
+print("波形グラフをwav.svgとして保存しました")
