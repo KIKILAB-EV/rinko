@@ -3,16 +3,16 @@
 
 #show: thesis.with()
 
-#title(date:datetime(year:2025,month:10,day:8),id:"電21-065", name:"木村 駿太")
+#title(date:datetime(year:2025,month:10,day:22),id:"電21-065", name:"木村 駿太")
 //#title(date:datetime(year:2025,month:4,day:1),id:"電22-113", name:"中島 壮")
 //#title(date:datetime(year:2025,month:9,day:17))
 
 
 = 概要
-前回に引き続き強化学習による制御をMATLAB/Simulinkで行った。今回は前回と同じアルゴリズムを用いて、報酬関数を変更して学習を行った。
+前回に引き続き強化学習による制御をMATLAB/Simulinkで行った。今回は学習アルゴリズムを変更して学習および制御を行った。
 
 = 環境の設定
-@tab:env に学習環境のパラメータを、@img:env にシミュレーション環境の図を示す。回生開始回転数$N_0$=1000 rpmから制御を開始し、$N<0.1$rpmとなれば制御終了とする。また、即値報酬の関数を@exp:reward および@img:rewardFnc に示す。目標減速度との誤差$e$をもとに報酬を計算し、誤差が小さいほど報酬が高くなり離れると報酬が低くなる。前回に比べてやや緩やかな曲線にした。@tab:rlparam に学習のパラメータを示す。また @img:agent にエージェントの構成を示す。観測項目は目標減速度, 減速度, 目標との誤差の誤差, デューティ比, 車両速度の5項目とした。
+@tab:env に学習環境のパラメータを、@img:env にシミュレーション環境の図を示す。回生開始回転数$N_0$=1000 rpmから制御を開始し、$N<0.1$rpmとなれば制御終了とする。また、即値報酬の関数を@exp:reward および@img:rewardFnc に示す。目標減速度との誤差$e_d$をもとに報酬を計算し、誤差が小さいほど報酬が高くなり離れると報酬が低くなる。アルゴリズムは前回はSACを使用したが、今回はDDPG(Deep Deterministic Policy Gradient)を用いる。@tab:rlparam に学習のパラメータを示す。また @img:agent にエージェントの構成を示す。観測項目は目標減速度, 減速度, 目標との誤差の誤差, デューティ比, 車両速度の5項目とした。
 #tab(
   table(
     columns: 3, column-gutter: 1em,
@@ -62,17 +62,17 @@
 #imgN(("img/env1.png","img/env2.png"), ("(a) シミュレーション全体図","(b) 回生回路"), cap:"シミュレーション環境", lab:<img:env>)
 #img("img/rewardFnc.png", cap:"報酬関数", lab:<img:rewardFnc>,w:7cm)
 $
-  R = 10 exp(-0.5 e^2)-9.8
+  R = 10 exp(-20 e^"  2"_d)-9.8
 $<exp:reward>
-#img("img/agent.png", cap:"SACエージェントの構成", lab:<img:agent>,w:8cm)
+#img("img/agent.png", cap:"DDPGエージェントの構成", lab:<img:agent>,w:11cm)
 = 結果
-@img:reward にエピソード報酬の推移を示す。60回目あたりから累計報酬は増加し100回目あたりで安定した。また、@img:decel -8に各エピソードの減速度, 回生電流, デューティ比, 充電電圧を示す。100回目あたりから出力に変化が見られなくなっている。いずれも0.7秒あたりから減速度が低下しだしており、デューティ比も上がりきっていない。また1.2秒付近からデューティ比が低下しており、充電電圧も低下している。
+@img:reward にエピソード報酬の推移を示す。累計報酬が-1200程度から-2500程度までとなっており安定していない。また、@img:decel -8に各エピソードの減速度, 回生電流, デューティ比, 充電電圧を示す。出力デューティ比は基本的に一定値をとるか、0と1を交互に出力しており、減速度の制御が全くできていない。
 
 = 今後の予定
-今後も報酬関数や学習率などのパラメータを調整するほか、DDPGやTD3などほかのアルゴリズムでも学習できるよう環境を整えていく。
+DDPG, TD3, SAC各アルゴリズムにおいて、パラメータを変えながら学習を行い、各アルゴリズムの比較を行う。
 
-#img("img/graphSAC/EpisodeReward.svg", cap: "エピソード数と報酬の推移", lab:<img:reward>,w:13cm)
-#imgN(("img/graphSAC/Agent10/D.svg","img/graphSAC/Agent50/D.svg","img/graphSAC/Agent100/D.svg","img/graphSAC/Agent150/D.svg","img/graphSAC/Agent200/D.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの減速度", lab:<img:decel>, w:8.5cm)
-#imgN(("img/graphSAC/Agent10/I.svg","img/graphSAC/Agent50/I.svg","img/graphSAC/Agent100/I.svg","img/graphSAC/Agent150/I.svg","img/graphSAC/Agent200/I.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの回生電流", lab:<img:current>, w:8.5cm)
-#imgN(("img/graphSAC/Agent10/Duty.svg","img/graphSAC/Agent50/Duty.svg","img/graphSAC/Agent100/Duty.svg","img/graphSAC/Agent150/Duty.svg","img/graphSAC/Agent200/Duty.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの出力デューティ比", lab:<img:duty>, w:8.5cm)
-#imgN(("img/graphSAC/Agent10/Vc.svg","img/graphSAC/Agent50/Vc.svg","img/graphSAC/Agent100/Vc.svg","img/graphSAC/Agent150/Vc.svg","img/graphSAC/Agent200/Vc.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの充電電圧", lab:<img:voltage>, w:8.5cm)
+#img("img/graphDDPG/EpisodeReward.svg", cap: "エピソード数と報酬の推移", lab:<img:reward>)
+#imgN(("img/graphDDPG/Agent10/D.svg","img/graphDDPG/Agent50/D.svg","img/graphDDPG/Agent100/D.svg","img/graphDDPG/Agent150/D.svg","img/graphDDPG/Agent200/D.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの減速度", lab:<img:decel>, w:8.5cm)
+#imgN(("img/graphDDPG/Agent10/I.svg","img/graphDDPG/Agent50/I.svg","img/graphDDPG/Agent100/I.svg","img/graphDDPG/Agent150/I.svg","img/graphDDPG/Agent200/I.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの回生電流", lab:<img:current>, w:8.5cm)
+#imgN(("img/graphDDPG/Agent10/Duty.svg","img/graphDDPG/Agent50/Duty.svg","img/graphDDPG/Agent100/Duty.svg","img/graphDDPG/Agent150/Duty.svg","img/graphDDPG/Agent200/Duty.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの出力デューティ比", lab:<img:duty>, w:8.5cm)
+#imgN(("img/graphDDPG/Agent10/Vc.svg","img/graphDDPG/Agent50/Vc.svg","img/graphDDPG/Agent100/Vc.svg","img/graphDDPG/Agent150/Vc.svg","img/graphDDPG/Agent200/Vc.svg"), ("(a) Episode 10","(b) Episode 50","(c) Episode 100","(d) Episode 150","(e) Episode 200"), cap:"各エピソードの充電電圧", lab:<img:voltage>, w:8.5cm)
