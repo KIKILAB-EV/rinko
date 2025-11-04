@@ -1,65 +1,30 @@
 #import "./style.typ":*
-#import "bxbibwrite.typ": *
+#import "./unit.typ"
 
-#show: thesis.with(bibliography-file: none)
+#show: thesis.with()
 
-#title(date:datetime(year:2025,month:6,day:18), id:"電22-113", name: "中島　壮")
+//#title(date:datetime(year:2025,month:10,day:22),id:"電21-065", name:"木村 駿太")
+#title(date:datetime(year:2025,month:11,day:5),id:"電22-113", name:"中島 壮")
+//#title(date:datetime(year:2025,month:9,day:17))
 
 = はじめに
-#pr
-減速度制御において、回転数や回生電流値のサンプリング周波数はデータ精度に関係し、制御において重要な要素の一つである。また、現在の実験ではサンプリングと制御は同時に行っており、サンプリング周波数と制御周波数は同じである。そのため制御の応答性に直結する要素である。前回の輪講において、サンプリング周波数を高くするとノイズの影響を受けるという話があった。そのため、サンプリング周波数による影響を調べる。
+今回は平滑コンデンサを挿入した状態で減速度制御を行った。
 
+= 実験方法
+@fig:circuit に回生回路を示す。整流回路の後段にコンデンサを並列に接続し、回生開始回転数$N_0$ = 1000 rpmとする。コンデンサ容量$C$を0.1, 1, 10, 100 #unit.uF と変化させ各特性を測定した。保護抵抗$R_"p"$ = 10 #unit.Ohm, $C$は0.1 #unit.uF はセラミックコンデンサ, その他の容量は電解コンデンサである。またPWM周波数は500 Hzである。
+#img("img/regeneration_circuit.svg", cap:"実験回路図", lab:<fig:circuit>, w:90%)
+#pb
 = 実験結果
-#pr
-回生開始回転数$N$ = 1000 rpm, スイッチング周波数$f_"sw"$ = 500 Hzとし、サンプリング周波数$f_s$を500 Hzから3000 Hzまで変化させたときの回生開始時のトルク, 減速度, 回転数, デューティ比, 回生電流, 回生電圧の変化を示す。
-#br
-サンプリング周波数による制御への影響は特に見られなかった。そのため今後は引き続き$f_s$ = 2000 Hzで実験を行う。
-#img("img/regeneration_circuit.svg", cap:"回生回路", lab:<regeneration_circuit>, w:80%)
-#pagebreak()
-#imgN(
-    ("\img\Fs500\グラフ\Torque.svg","\img\Fs1000\グラフ\Torque.svg", "\img\Fs1500\グラフ\Torque.svg", "\img\Fs2000\グラフ\Torque.svg", "\img\Fs2500\グラフ\Torque.svg", "\img\Fs3000\グラフ\Torque.svg"),
-    ([(a) $f_s = 500$ Hz], [(b) $f_s = 1000$ Hz], [(c) $f_s = 1500$ Hz], [(d) $f_s = 2000$ Hz], [(e) $f_s = 2500$ Hz], [(f) $f_s = 3000$ Hz]),
-    cap:"トルク",
-    lab:<torque>,
-    w:95%
-)
+@fig:torque, 3に各容量における制動トルク特性を示す。各容量において停止直前までおおむね目標減速度に沿って減速できている。$C=100 #unit.uF$では昇圧開始後にトルクの変動が大きいが減速度の大きな変化は見られない
+#imgN(("img/C_none/グラフ/Torque.svg","img/0.1/グラフ/Torque.svg","img/1.0/グラフ/Torque.svg","img/10/グラフ/Torque.svg","img/100_2/グラフ/Torque.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"制動トルク", w:7cm, lab:<fig:torque>)
+#imgN(("img/C_none/グラフ/Deceleration.svg","img/0.1/グラフ/Deceleration.svg","img/1.0/グラフ/Deceleration.svg","img/10/グラフ/Deceleration.svg","img/100_2/グラフ/Deceleration.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"減速度", w:7cm,lab:<fig:deceleration>)
 
-#imgN(
-    ("\img\Fs500\グラフ\Deceleration.svg","\img\Fs1000\グラフ\Deceleration.svg", "\img\Fs1500\グラフ\Deceleration.svg", "\img\Fs2000\グラフ\Deceleration.svg", "\img\Fs2500\グラフ\Deceleration.svg", "\img\Fs3000\グラフ\Deceleration.svg"),
-    ([(a) $f_s = 500$ Hz], [(b) $f_s = 1000$ Hz], [(c) $f_s = 1500$ Hz], [(d) $f_s = 2000$ Hz], [(e) $f_s = 2500$ Hz], [(f) $f_s = 3000$ Hz]),
-    cap:"減速度",
-    lab:<torque>,
-    w:100%
-)
-
-#imgN(
-    ("\img\Fs500\グラフ\N.svg","\img\Fs1000\グラフ\N.svg", "\img\Fs1500\グラフ\N.svg", "\img\Fs2000\グラフ\N.svg", "\img\Fs2500\グラフ\N.svg", "\img\Fs3000\グラフ\N.svg"),
-    ([(a) $f_s = 500$ Hz], [(b) $f_s = 1000$ Hz], [(c) $f_s = 1500$ Hz], [(d) $f_s = 2000$ Hz], [(e) $f_s = 2500$ Hz], [(f) $f_s = 3000$ Hz]),
-    cap:"回転数",
-    lab:<torque>,
-    w:100%
-)
-
-#imgN(
-    ("\img\Fs500\グラフ\Duty.svg","\img\Fs1000\グラフ\Duty.svg", "\img\Fs1500\グラフ\Duty.svg", "\img\Fs2000\グラフ\Duty.svg", "\img\Fs2500\グラフ\Duty.svg", "\img\Fs3000\グラフ\Duty.svg"),
-    ([(a) $f_s = 500$ Hz], [(b) $f_s = 1000$ Hz], [(c) $f_s = 1500$ Hz], [(d) $f_s = 2000$ Hz], [(e) $f_s = 2500$ Hz], [(f) $f_s = 3000$ Hz]),
-    cap:"デューティ比",
-    lab:<torque>,
-    w:100%
-)
-
-#imgN(
-    ("\img\Fs500\グラフ\Current.svg","\img\Fs1000\グラフ\Current.svg", "\img\Fs1500\グラフ\Current.svg", "\img\Fs2000\グラフ\Current.svg", "\img\Fs2500\グラフ\Current.svg", "\img\Fs3000\グラフ\Current.svg"),
-    ([(a) $f_s = 500$ Hz], [(b) $f_s = 1000$ Hz], [(c) $f_s = 1500$ Hz], [(d) $f_s = 2000$ Hz], [(e) $f_s = 2500$ Hz], [(f) $f_s = 3000$ Hz]),
-    cap:"回生電流",
-    lab:<torque>,
-    w:100%
-)
-
-#imgN(
-    ("\img\Fs500\グラフ\Vedlc.svg","\img\Fs1000\グラフ\Vedlc.svg", "\img\Fs1500\グラフ\Vedlc.svg", "\img\Fs2000\グラフ\Vedlc.svg", "\img\Fs2500\グラフ\Vedlc.svg", "\img\Fs3000\グラフ\Vedlc.svg"),
-    ([(a) $f_s = 500$ Hz], [(b) $f_s = 1000$ Hz], [(c) $f_s = 1500$ Hz], [(d) $f_s = 2000$ Hz], [(e) $f_s = 2500$ Hz], [(f) $f_s = 3000$ Hz]),
-    cap:"充電電圧",
-    lab:<torque>,
-    w:100%
-)
+@fig:energy に各容量における回生エネルギー特性を示す。赤色破線がコンデンサ挿入前の値である。$C=1.0 #unit.uF$では挿入前に比べて充電電圧は約1 V増加した。しかし容量を増加させていくと充電電圧は低下し、最大電流値も大きく増加した。
+#imgN(("img/energy/Vedlc.svg", "\img\energy\maxI.svg", "\img\energy\Energy.svg", "\img\energy\Efficiency.svg"), ("(a) EDLC充電電圧", [(b) 最大回生電流], [(c) 回生エネルギー], [(d) 回生効率]), cap:"各種容量特性", w:7cm, lab:<fig:energy>)
+= 参考資料
+#imgN(("img/C_none/グラフ/N.svg","img/0.1/グラフ/N.svg","img/1.0/グラフ/N.svg","img/10/グラフ/N.svg","img/100_2/グラフ/N.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"EDLC充電電圧", w:7cm)
+#imgN(("img/plots/C_none/Vedlc.svg","img/plots/0.1/Vedlc.svg","img/plots/1.0/Vedlc.svg","img/plots/10/Vedlc.svg","img/plots/100_2/Vedlc.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"EDLC充電電圧", w:7cm)
+#imgN(("img/plots/C_none/I.svg","img/plots/0.1/I.svg","img/plots/1.0/I.svg","img/plots/10/I.svg","img/plots/100_2/I.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"回生電流(メモリーハイコーダ)", w:7cm)
+#imgN(("img/C_none/グラフ/Current.svg","img/0.1/グラフ/Current.svg","img/1.0/グラフ/Current.svg","img/10/グラフ/Current.svg","img/100_2/グラフ/Current.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"回生電流(メモリーハイコーダ)", w:7cm)
+#imgN(("img/C_none/グラフ/Duty.svg","img/0.1/グラフ/Duty.svg","img/1.0/グラフ/Duty.svg","img/10/グラフ/Duty.svg","img/100_2/グラフ/Duty.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"デューティ比", w:7cm)
+#imgN(("img/C_none/グラフ/Kp.svg","img/0.1/グラフ/Kp.svg","img/1.0/グラフ/Kp.svg","img/10/グラフ/Kp.svg","img/100_2/グラフ/Kp.svg"),("(a) Without Capacitor", [(b) $C$ = 0.1 #unit.uF], [(c) $C$ = 1 #unit.uF], [(d) $C$ = 10 #unit.uF], [(e) $C$ = 100 #unit.uF]), cap:"比例ゲイン", w:7cm)

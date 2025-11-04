@@ -1,21 +1,22 @@
 #import "bxbibwrite.typ": *
+#import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
 
-#let heading_font(body) = {
-	set text(font: ("Times New Roman", "HGMinchoE"),size : 12pt)
-	body
-}
-
-#let title_font(body) = {
-	set text(font: ("Times New Roman", "HGMinchoE"), size:14pt) 
-	body
-}
+#let roman_font = (name: "Times New Roman", covers: regex("[ -~]"))
+#let bold_font = (name: "HGMinchoE", covers: regex("[^ -~]"))
+#let normal_font = (name: "MS Mincho", covers: regex("[^ -~]"))
 
 #let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2025, content : "研究経過報告") = {
+	
+	let title_font(body) = {
+		set text(font: (roman_font, bold_font), size:14pt) 
+		body
+	}
 	set align(center)
 	set text(size:12pt)
-	[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
-	parbreak()
-	title_font([電気自動車班#h(0.5em)#content])
+	block[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
+	v(0.5em)
+	block(title_font([電気自動車班#h(0.5em)#content]))
+	v(0.5em)
 	set align(right)
 	v(0em)
 	let wd = date.display("[weekday]")
@@ -41,11 +42,8 @@
 		wd = "土"
 	}
 	let data = date.display("[month padding:space]月[day padding:space]日")
-	[#data (#wd)#h(1em)#id#h(1em)#name]
-}
-
-#let value(v,e:none,u:none) = {
-	qty(v,u,e:e,per-mode: "symbol")
+	block[#data (#wd)#h(1em)#id#h(1em)#name]
+	v(0.5em)
 }
 
 //改行
@@ -60,14 +58,8 @@
 }
 
 //改ページ
-#let np = {
+#let pb = {
 	pagebreak()
-}
-
-//セクションはじめ
-#let pr = {
-	v(0.5em)
-	h(1em)
 }
 
 // 画像を配置する
@@ -81,17 +73,21 @@
 // - bib: 参考文献
 // - place: 画像の配置 
 #let img(path, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
+	counter("image").step()
 	set align(center)
-	let captioon = []
+	let caption = []
 	if (cap != none){
-		captioon = [#std.h(0.5em)#cap]
+		caption = [#std.h(0.5em)#cap]
+	}
+	if(bib != none){
+		caption = [#caption #bib]
 	}
 
 	v(1em)
 	[
 		#figure(
 			image(path, width: w, height: h),
-			caption: captioon,
+			caption: caption,
 			supplement: [図],
 			numbering: "1",
 			kind: "image",
@@ -100,6 +96,7 @@
 		#if (lab != none) {
 			lab	
 		}
+		
 	]
 	v(1em)
 
@@ -117,11 +114,16 @@
 // - bib: 参考文献
 // - place: 画像の配置 
 #let imgN(imgs, caps, cap:none, lab:none, w:auto, h:auto, bib:none, place:none) = {
+	counter("image").step()
 	set align(center)
-	let captioon = []
+	let caption = []
 	if (cap != none){
-		captioon = [#std.h(0.5em)#cap]
+		caption = [#std.h(0.5em)#cap]
 	}
+	if(bib != none){
+		caption = [#caption #bib]
+	}
+
 	let ary = array(())
 	for i in range(imgs.len()) {
 		if (i == imgs.len() -1 and calc.odd(imgs.len())){
@@ -138,7 +140,7 @@
 					..ary.map((i) => i).flatten(),
 					align: center+horizon,
 				),
-				caption: captioon,
+				caption: caption,
 				supplement: [図],
 				numbering: "1",
 				kind: "image",
@@ -164,14 +166,18 @@
 // 	- bib: 参考文献
 //  - place: 表の配置
 #let tab(body, cap:none, lab:none, bib:none, place:none) = {
-	let captioon = []
+	counter("table").step()
+	let caption = []
 	if (cap != none){
-		captioon = [#std.h(0.5em)#cap]
+		caption = [#std.h(0.5em)#cap]
+	}
+	if(bib != none){
+		caption = [#caption #bib]
 	}
 	v(1em)
 	[#figure(
 		body,
-		caption: captioon,
+		caption: caption,
 		supplement: [表],
 		numbering: "1",
 		kind: "table",
@@ -180,11 +186,18 @@
 	#if (lab != none) {
 		lab	
 	}
-	#if (bib != none) {
-		bib
-	}
 	]
 	v(1em)
+	
+}
+
+
+#let dummy(words, offset:0)={
+    let text = "ヘッケはこれらのL-函数が全複素平面へ有理型接続を持ち、指標が自明であるときにはs=1でオーダー1である極を持ち、それ以外では解析的であることを証明した。原始ヘッケ指標（原始ディリクレ指標に同じ方法であるmodulusに相対的に定義された）に対し、ヘッケは、これらのL-函数が指標のL-函数の函数等式を満たし、L-函数の複素共役指標であることを示した。主イデアル上の座と、無限での座を含む全ての例外有限集合の上で1である単円の上への写像を取ることで、イデール類群の指標ψを考える。すると、ψはイデアル群ISの指標χを生成し、イデアル群はS上に入らない素イデアル上の自由アーベル群となる。[2]Sに入らない各々の素イデアルpの統一された元πを取り、各々のpを、pの中ではπであり、そうでない場合は1であるようなイデールのクラスへ写すことにより、ISからイデアル類への写像Πを定義することができる。χをΠとψの合成とすると、χはイデアル群上の指標としてうまく定義できる。"
+
+    let length = text.clusters().len()
+    let times = calc.div-euclid(offset + words, length) + 1
+    (text * times).clusters().slice(offset, offset + words).join("")
 }
 
 // スタイルの適用
@@ -194,7 +207,11 @@
 	bibliography-file: none,
 	body,
 ) = {
-	// citation number
+	let leading = 0.8em
+	let heading_font(body) = {
+		set text(font: (roman_font, bold_font),size : 12pt)
+		body
+	}
 	show ref: it => {
 		let el = it.element
 		if el == none{
@@ -211,77 +228,71 @@
 				let num = numbering(el.numbering, ..counter(heading).at(loc)).at(0)
 				link(el.location(), "第" + str(num) + "節")
 			} 
+			else if el.func() == figure{
+				
+				let loc = el.location()
+				let num = numbering(el.numbering, ..counter(el.kind).at(loc)).at(0)
+				link(el.location(), el.supplement + str(num))
+			
+			}
 			else{
 				it
 			}
 		}
 	}
-// 	#show figure.caption: it => [
-//   #underline(it.body) |
-//   #it.supplement
-//   #context it.counter.display(it.numbering)
-// ]
-	// counting caption number
 	show figure.where(
 		kind: "table"
 	): it => {
-		set figure.caption(position: top, separator: none)
-		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
-		it.body
+		
+		if(it.placement == none){
+			[
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			]
+		}
+		else{
+			place(center+it.placement, [
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			], float: true)
+		}
 	}
 	show figure.where(
 		kind: "image"
 	): it => {
-		it.body
-		set figure.caption(position: top, separator: none)
-		[#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body]
+		if(it.placement == none){
+			[
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			]
+		}
+		else{
+			place(center+it.placement, [
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			], float: true)
+		}
 	}
-		//it.body
-		//it
 	
-	// show figure: it => {
-	// 	set align(center)
-	// 	if it.kind == "image" {
-	// 		set text(size: 12pt)
-	// 		it.body
-	// 		it.supplement
-	// 		" " + it.counter.display(it.numbering)
-	// 		if (it.caption != none){
-	// 			"　" + it.caption.body
-	// 		}
-	// 	} 
-	// 	// else if it.kind == "table" {
-	// 	// 	set text(size: 12pt)
-	// 	// 	it.supplement
-	// 	// 	" " + it.counter.display(it.numbering)
-	// 	// 	if (it.caption != none){
-	// 	// 		"　" + it.caption.body
-	// 	// 	}
-	// 	// 	set text(size: 12pt)
-	// 	// 	it.body
-	// 	// } 
-	// 	else {
-	// 		//it
-	// 	}
-	//}
+	show: remove-cjk-break-space
 
-	set text(font: ("Times New Roman", "MS Mincho"), size:12pt, lang:"ja")
+	set text(font: (roman_font, normal_font), size:12pt, lang:"ja")
 	
-	show label("bold"): set text(font: ("Times New Roman", "HGMinchoE"), size: 12pt)
-	show label("boldL"): set text(font: ("Times New Roman", "HGMinchoE"), size: 14pt)
+	show label("bold"): set text(font: (roman_font, bold_font), size: 12pt)
+	show label("boldL"): set text(font: (roman_font, bold_font), size: 14pt)
 
-	// Configure the page properties.
 	set page(paper:"a4", numbering: "1", margin: (top:30mm,bottom:35mm,x:30mm))
 
 	counter(page).update(1)
 
-	// Configure paragraph properties.
-	//set par(first-line-indent: 1em, justify: true, leading: 0.8em)
-	// Configure chapter headings.
 	set heading(numbering: (..args) => {
-		let nums = args.pos() // 引数の位置引数を`array`として取得
-		let n = nums.at(2)
-		if nums.len() == 1 { // 階層総数が1しかない、即ち最高階層
+		let nums = args.pos()
+		let n = nums.at(-1)
+		if nums.len() == 1 { 
 			return numbering("1. ", n)
 		} else {
 			return numbering("1. ", n)
@@ -289,14 +300,14 @@
 	}, level: 3)
 	show heading: it => {
 		heading_font(it)
-		//
+		v(0.5em)
 	}
 	counter(page).update(1)
 
 	set math.equation(supplement: [式], numbering: "(1)")
-	//show math.equation: it => [#h(0.15em,weak:true) #it #h(0.15em,weak:true)]
+	
 	show: use-bib-item-ref.with(numbering: "(1)")
-	set par(justify: true, first-line-indent: 1em, leading: 0.8em)
+	set par(justify: true, first-line-indent: (amount: 1.0em, all: true), leading: leading, spacing: leading)
 	body
 
 	set heading(level: 1, numbering: none)
@@ -304,7 +315,6 @@
 		heading_font(it)
 	}
 
-	// Display bibliography.
 	if bibliography-file != none {
 		show bibliography: set text(12pt)
 		bibliography(bibliography-file, style: "輪講.csl", title:"参考文献")
