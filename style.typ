@@ -46,6 +46,10 @@
 	v(0.5em)
 }
 
+#let rt(body) = {
+	text(body, fill: red)
+}
+
 //改行
 #let lb = {
 	linebreak()
