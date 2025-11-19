@@ -3,16 +3,16 @@
 
 #show: thesis.with()
 
-#title(date:datetime(year:2025,month:11,day:12),id:"電21-065", name:"木村 駿太")
+#title(date:datetime(year:2025,month:11,day:19),id:"電21-065", name:"木村 駿太")
 //#title(date:datetime(year:2025,month:4,day:1),id:"電22-113", name:"中島 壮")
 //#title(date:datetime(year:2025,month:9,day:17))
 
 
 = 概要
-前回に引き続き強化学習による制御をMATLAB/Simulinkで行った。今回はSACにおいて、学習時に目標減速度を乱数により変化させて学習させた。
+前回は学習時に目標値を乱数で変化させて学習させた。今回はその学習結果を用いて、目標減速度に幅を持たせた場合にどの程度追従できるのかを確認した。
 
-= 環境の設定
-@tab:rlparam に強化学習のパラメータを示す。また報酬関数を@exp:rf1 に示す。また最大減速度に$k=$0.1, 0.2, 0.3, 0.4とし、最大減速度$D_"max" times (1±k)$の乱数を掛けた値を目標減速度とした。なお乱数生成は一様分布で行った。
+= 学習パラメータ
+@tab:rlparam に前回行った学習のパラメータを、報酬関数を@exp:rf1 に示す。また最大減速度に$k=$0.1, 0.2, 0.3, 0.4とし、最大減速度$D_"max" times (1±k)$の乱数を掛けた値を目標減速度とした。なお乱数生成は一様分布で行った。
 #tab(
   table(
     columns: 2, column-gutter: 1em,
@@ -34,16 +34,32 @@
 $
   R = 10 exp(-0.5 e_d ^"  2")-9.8
 $<exp:rf1>
+= 検証設定
+各$k$で学習させたエージェントに対し最大減速度に$k'=0.6 ~ 1.4$を掛けた値を目標減速度の最大値となるよう設定した。ただし$k'=0.6$では初期の減速度を下回るため、最大減速度を初期の減速度と同じ値に設定した。
 #pb
 = 結果
-@img:reward に各減速度での報酬を示す。また@img:decel0.2 - 5 に各目標減速度での減速度波形を示す。30エピソード付近から基本的な制御はできるようになり、160エピソードあたりで良好な制御ができるようになってきている。目標値に幅を持たせたためか、過学習のような傾向は見られなかった。
+#let ep = 200
+@img:k0.1 - 4にエピソード数#ep の各$k$で学習させたエージェントの、各$k'$に対するグラフを示す。
 
-しかし$k$の違いによる変化は特にみられなかった。次回はこの学習させたエージェントを用いて、目標減速度に幅を持たせた場合にどの程度追従できるのかを確認し、$k$の違いによる変化があるかを見る。
-#imgN(("img/0.1/EpisodeReward.svg","img/0.2/EpisodeReward.svg","img/0.3/EpisodeReward.svg","img/0.4/EpisodeReward.svg"), ([(a) $k = 0.1$] ,[(b) $k = 0.2$],[(c) $k = 0.3$],[(d) $k = 0.4$]), cap:"各エピソードの減速度", lab:<img:reward>, w:8.5cm)
+いずれにおいても、最大減速度が低いほど目標への追従性は高い傾向にある。一方で、最大減速度が高い場合は目標への追従性が低下する傾向にあり1.4倍では追従する前に減速度が低下している。出力デューティ比はほぼ1であるため、今回使用しているモデルではもとの最大減速度より高い減速度を維持しながら回生を行うのは困難であると考えられる。
 
-#imgN(("img/0.1/Agent10/Dflt.svg","img/0.1/Agent30/Dflt.svg","img/0.1/Agent60/Dflt.svg", "img/0.1/Agent110/Dflt.svg", "img/0.1/Agent160/Dflt.svg", "img/0.1/Agent200/Dflt.svg"), ([(a) Episode 10] ,[(b) Episode 30],[(c) Episode 60],[(c) Episode 110],[(c) Episode 160],[(c) Episode 200]), cap:[$k = 0.1$ での減速度], lab:<img:decel0.1>, w:8.5cm)
+また使用したエージェントのエピソード数にもよるが、$k$が大きいほど幅広い目標減速度に対して追従性が高い傾向にある。これは学習時に幅広い目標減速度に対して学習しているため、各目標減速度に対する出力が適切に学習されているためと考えられる。元の最大減速度での追従性も若干ではあるが向上しているようにも見える。
 
-#imgN(("img/0.2/Agent10/Dflt.svg","img/0.2/Agent60/Dflt.svg","img/0.2/Agent100/Dflt.svg", "img/0.2/Agent120/Dflt.svg", "img/0.2/Agent160/Dflt.svg", "img/0.2/Agent200/Dflt.svg"), ([(a) Episode 10] ,[(b) Episode 30],[(c) Episode 60],[(c) Episode 110],[(c) Episode 140],[(c) Episode 200]), cap:[$k = 0.2$ での減速度], lab:<img:decel0.2>, w:8.5cm)
+= 今後の予定
+今回の結果から、学習時に目標減速度に幅を持たせることで、幅広い目標減速度に対して追従性を向上させることができると考えられる。そのため最大減速度に$0.6~1.4$倍程度の幅を持たせて学習を行い、パラメータや報酬の調整を行う。また初期回転数を変化させるなども検討する。
 #pb
-#imgN(("img/0.3/Agent10/Dflt.svg","img/0.3/Agent30/Dflt.svg","img/0.3/Agent60/Dflt.svg", "img/0.3/Agent110/Dflt.svg", "img/0.3/Agent160/Dflt.svg", "img/0.3/Agent200/Dflt.svg"), ([(a) Episode 10] ,[(b) Episode 30],[(c) Episode 60],[(c) Episode 110],[(c) Episode 160],[(c) Episode 200]), cap:[$k = 0.3$ での減速度], lab:<img:decel0.3>, w:8.5cm)
-#imgN(("img/0.4/Agent10/Dflt.svg","img/0.4/Agent30/Dflt.svg","img/0.4/Agent60/Dflt.svg", "img/0.4/Agent110/Dflt.svg", "img/0.4/Agent160/Dflt.svg", "img/0.4/Agent200/Dflt.svg"), ([(a) Episode 10] ,[(b) Episode 30],[(c) Episode 60],[(c) Episode 110],[(c) Episode 160],[(c) Episode 200]), cap:[$k = 0.4$ での減速度], lab:<img:decel0.4>, w:8.5cm)
+#let eg_k = 0.1
+
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.1>, w:8.5cm)
+#pb
+#let eg_k = 0.2
+
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.2>, w:8.5cm)
+#pb
+#let eg_k = 0.3
+
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.3>, w:8.5cm)
+#pb
+#let eg_k = 0.4
+
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.4>, w:8.5cm)
