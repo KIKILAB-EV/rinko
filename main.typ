@@ -4,25 +4,25 @@
 #show: thesis.with()
 
 //#title(date:datetime(year:2025,month:10,day:22),id:"電21-065", name:"木村 駿太")
-#title(date:datetime(year:2025,month:11,day:26),id:"電22-113", name:"中島 壮")
+#title(date:datetime(year:2025,month:12,day:3),id:"電22-113", name:"中島 壮")
 //#title(date:datetime(year:2025,month:9,day:17))
 
 = はじめに
-前回は平滑コンデンサを挿入した状態で減速度制御を行った。その際容量が大きいと測定時に電流値が大きくなり制御が不安定になっていた。今回は電流プローブの出力電圧にキャパシタを挿入しフィルタをかけ制御を行った。
+今回は回生電流の測定位置を変更し、再び制御を行った。
 
 = 実験方法
-@fig:circuit に回生回路を示す。整流回路の後段に平滑コンデンサを並列に接続し、回生開始回転数$N_0$ = 1000 rpmとする。平滑コンデンサ容量$C$を0.1, 1, 10, 100 #unit.uF と変化させ各特性を測定した。保護抵抗$R_"p"$ = 10 #unit.Ohm, $C$は0.1 #unit.uF はセラミックコンデンサ, その他の容量は電解コンデンサである。またPWM周波数は500 Hzである。またフィルタコンデンサ$C_F$=47, 100 #unit.uF を電流プローブの出力に接続しノイズ除去を行った。
+@fig:circuit に回生回路を示す。整流回路の後段に平滑コンデンサを並列に接続し、回生開始回転数$N_0$ = 1000 rpmとする。平滑コンデンサ容量$C$を0.1, 1, 10, 100 #unit.uF と変化させ各特性を測定した。保護抵抗$R_"p"$ = 10 #unit.Ohm, $C$は0.1 #unit.uF はセラミックコンデンサ, その他の容量は電解コンデンサである。またPWM周波数は500 Hzである。電流の測定位置を平滑コンデンサの前に移動した。測定方法は前回同様クランプ式の電流プローブを用いている。
 #img("img/regeneration_circuit.pdf", cap:"実験回路図", lab:<fig:circuit>, w:90%)
-#pb
+
 = 実験結果
-@fig:Cf0 - 4に各$C_F$における減速度および回生電流を示す。フィルタを挿入するとこで電流値の急激な変化はある程度除去され、減速度の変動も小さくなった。$C_F=47 #unit.uF$に比べて$C_F=100 #unit.uF$では電流値の変動がより抑えられている。しかし減速度の変動はあまり変化が見られなかった。
+@fig:deceleration - 4に各コンデンサ容量における減速特性、トルク特性、電流特性を示す。コンデンサ容量が大きくなるにつれて、電流制限区間における電流値の変動が軽減されている。そのためトルクの変動も抑制されている。$C=100 #unit.uF$における昇圧区間の電流値の変動はPIパラメータの調整により軽減できると考えている。
 
-#imgN(("img/C0/100/グラフ/Deceleration.svg","img/C0/100/グラフ/Current.svg"), ("(a) 減速度", [(b) 回生電流]), cap:[$C=100#unit.uF$, フィルタなし], w:7cm, lab:<fig:Cf0>)
-#imgN(("img/C47/100/グラフ/Deceleration.svg","img/C47/100/グラフ/Current.svg"), ("(a) 減速度", [(b) 回生電流]), cap:[$C=100#unit.uF$, $C_F=47 #unit.uF$], w:7cm, lab:<fig:Cf47>)
-#imgN(("img/C100/100/グラフ/Deceleration.svg","img/C100/100/グラフ/Current.svg"), ("(a) 減速度", [(b) 回生電流]), cap:[$C=100#unit.uF$, $C_F=100 #unit.uF$], w:7cm, lab:<fig:Cf100>)
-@fig:vedlc に充電電圧の比較を、@fig:Cf0_ - 8 に平滑コンデンサなしの場合の減速度およびデューティ比を示す。。フィルタの有無による充電電圧の傾向の変化は見られない。$C=0.1, 100 #unit.uF$ではフィルタによる変化はなかった。一方$C=1.0 #unit.uF$ではフィルタにより充電電圧が低下、$C=10 #unit.uF$では充電電圧が上昇した。また平滑コンデンサなしの場合の充電電圧は$C_F$が大きくなるにつれて低下した。減速度波形に変化は見られないが、わずかに昇圧動作の開始が遅れている。フィルタを挿入したことにより応答性が低下したためと考えられる。
-#img("img/energy/vedlc.png", cap:"充電電圧比較", lab:<fig:vedlc>,w:12cm)
+@fig:energy に各コンデンサ容量における充電電圧と最大回生電流を示す。コンデンサ容量が大きくなるにつれて最大回生電流も減少している。また充電電圧の推移に関しては、以前までの結果と同様であった。
+#let file = "Deceleration"
+#imgN(("img/C_none/"+file+".pdf","img/0.1/"+file+".pdf","img/1/"+file+".pdf","img/10/"+file+".pdf","img/100/"+file+".pdf"), ([(a) コンデンサなし],[(b) $C=0.1 #unit.uF$],[(c) $C=1.0 #unit.uF$],[(d) $C=10 #unit.uF$],[(e) $C=100 #unit.uF$]), cap:"各平滑コンデンサ容量における減速特性", lab:<fig:deceleration>, w:7cm)
+#let file = "Torque"
+#imgN(("img/C_none/"+file+".pdf","img/0.1/"+file+".pdf","img/1/"+file+".pdf","img/10/"+file+".pdf","img/100/"+file+".pdf"), ([(a) コンデンサなし],[(b) $C=0.1 #unit.uF$],[(c) $C=1.0 #unit.uF$],[(d) $C=10 #unit.uF$],[(e) $C=100 #unit.uF$]), cap:"各平滑コンデンサ容量におけるトルク特性", lab:<fig:toruq>, w:7cm)
+#let file = "Current"
+#imgN(("img/C_none/"+file+".pdf","img/0.1/"+file+".pdf","img/1/"+file+".pdf","img/10/"+file+".pdf","img/100/"+file+".pdf"), ([(a) コンデンサなし],[(b) $C=0.1 #unit.uF$],[(c) $C=1.0 #unit.uF$],[(d) $C=10 #unit.uF$],[(e) $C=100 #unit.uF$]), cap:"各平滑コンデンサ容量における電流特性", lab:<fig:current>, w:7cm)
 
-#imgN(("img/C0/10/グラフ/Deceleration.svg","img/C0/10/グラフ/Duty.svg"), ("(a) 減速度", [(b) デューティ比]), cap:[$C$なし, フィルタなし], w:7cm, lab:<fig:Cf0_>)
-#imgN(("img/C47/10/グラフ/Deceleration.svg","img/C47/10/グラフ/Duty.svg"), ("(a) 減速度", [(b) デューティ比]), cap:[$C$なし, $C_F=47 #unit.uF$], w:7cm, lab:<fig:Cf47_>)
-#imgN(("img/C100/10/グラフ/Deceleration.svg","img/C100/10/グラフ/Duty.svg"), ("(a) 減速度", [(b) デューティ比]), cap:[$C$なし, $C_F=100 #unit.uF$], w:7cm, lab:<fig:Cf100_>)
+#imgN(("img/plots_energy/ChargingVoltage_1000rpm.png", "img/plots_energy/MaxRegenerativeCurrent_1000rpm.png"), ([(a) 充電電圧], [(b) 最大回生電流]), cap:"各平滑コンデンサ容量における充電電圧と最大回生電流", lab:<fig:energy>, w:7cm)
