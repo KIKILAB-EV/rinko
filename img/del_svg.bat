@@ -1,3 +1,3 @@
 @echo off
-del /s *.html
+del /s *.svg
 echo サブフォルダ内を含むSVGファイルを削除しました。

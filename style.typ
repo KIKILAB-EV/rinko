@@ -232,7 +232,7 @@
 				
 				let loc = el.location()
 				let num = numbering(el.numbering, ..counter(el.kind).at(loc)).at(0)
-				link(el.location(), el.supplement + str(num))
+				link(el.location(), str(num))
 			
 			}
 			else{
