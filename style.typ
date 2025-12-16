@@ -231,7 +231,7 @@
 			else if el.func() == figure{
 				
 				let loc = el.location()
-				let num = numbering(el.numbering, ..counter(el.kind).at(loc)).at(0)
+				let num = numbering(el.numbering, ..counter(el.kind).at(loc))
 				link(el.location(), str(num))
 			
 			}
