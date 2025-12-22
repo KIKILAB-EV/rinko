@@ -1,8 +1,0 @@
-F:\Lab\rinko\img\1000rpm\01\Ic.svg
-F:\Lab\rinko\img\1000rpm\1\Ic.svg
-F:\Lab\rinko\img\1000rpm\10\Ic.svg
-F:\Lab\rinko\img\1000rpm\100\Ic.svg
-F:\Lab\rinko\img\2000rpm\01\Ic.svg
-F:\Lab\rinko\img\2000rpm\1\Ic.svg
-F:\Lab\rinko\img\2000rpm\10\Ic.svg
-F:\Lab\rinko\img\2000rpm\100\Ic.svg

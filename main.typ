@@ -1,38 +1,63 @@
 #import "./style.typ":*
 #import "./unit.typ"
+#import "@preview/pillar:0.3.2"
 
-#show: thesis.with()
+#show: thesis.with(bibliography-file: "ref.bib")
 
 //#title(date:datetime(year:2025,month:10,day:22),id:"電21-065", name:"木村 駿太")
-#title(date:datetime(year:2025,month:12,day:17),id:"電22-113", name:"中島 壮")
+#title(date:datetime(year:2025,month:12,day:24),id:"電22-113", name:"中島 壮")
 //#title(date:datetime(year:2025,month:9,day:17))
 
 = はじめに
-今回は回転数を2000 rpmとした場合における平滑コンデンサを挿入した場合の制御を行った。
+今回は挿入するコンデンサの抵抗値の測定、および平滑コンデンサを挿入した場合の充電特性を測定した。
 
-= 実験方法
-図@fig:circuit に回生回路を示す。整流回路の後段に平滑コンデンサを並列に接続し、回生開始回転数$N_0$ = 1000, 2000 rpmとする。平滑コンデンサ容量$C$を0.1, 1, 10, 100 #unit.uF と変化させ各特性を測定した。保護抵抗$R_"p"$ = 10 #unit.Ohm, $C$は0.1 #unit.uF はセラミックコンデンサ, その他の容量は電解コンデンサである。またPWM周波数は500 Hzである。
+= コンデンサの抵抗値測定
+平滑コンデンサ$C$の直列抵抗値$R_s$および直列静電容量$C_s$をLCRメータで測定した。測定に用いた周波数は$f=10 ~ 10000 unit.Hz$である。また、各$C$の仕様を表@tab:capacitor_specs に示す。ESRに関して、データシートへ記載は見当たらなかった。
+
+#tab(
+	table(
+		..pillar.cols("c|cccc"),
+		columns: 5,
+		stroke:none,
+		align: horizon,
+		table.hline(),
+		[], [0.1 #unit.uF], [1 #unit.uF], [10 #unit.uF], [100 #unit.uF],
+		table.hline(),
+		[メーカー], [村田製作所], table.cell(colspan: 3)[ニチコン],
+		[品番], [RCER72J#linebreak()104K4K1H03B], [UVZ2G010#linebreak()MPD1TA], [UVZ2G100#linebreak()MHD1TO], [UVY2G101#linebreak()MHD],
+		[シリーズ], [RCE], table.cell(colspan: 2)[UVZ], [UVY],
+		[種類], [MLCC], table.cell(colspan:3)[アルミニウム電解コンデンサ],
+		[データシート],[文献@RCE],table.cell(colspan:2)[文献@UVZ], [文献@UVY],
+		[定格電圧], [630 V], table.cell(colspan:3)[450 V],
+		[容量誤差], [±10 %], table.cell(colspan:3)[±20 %],
+		table.hline()
+	),
+	cap:"各コンデンサの仕様",
+	lab:<tab:capacitor_specs>
+)
+= 抵抗値測定結果
+図@fig:cap_specs に各コンデンサの直列抵抗値$R_s$および直列静電容量$C_s$の測定結果を示す。$C_s$は公称容量に対する割合で示している。$C$が増加するに従い$R_s$は減少し、$C_s$は周波数増加に伴い減少する傾向が見られた。
+#imgN(("img/C_r/Rs_all.pdf", "img/C_r/Cs_all.pdf"), ([(a) 直列抵抗値$R_s$], [(b) 直列静電容量値$C_s$]), cap: "測定結果", lab:<fig:cap_specs>)
+
+= 充電特性測定方法
+図@fig:circuit に回生回路を示す。整流回路の後段に平滑コンデンサを並列に接続し、回生開始回転数$N_0$ = 1000, 2000 rpmとする。平滑コンデンサ容量$C$を0.1, 1, 10, 100 #unit.uF と変化させ各特性を測定した。保護抵抗$R_"p"$ = 10 #unit.Ohm である。
 #img("img/regeneration_circuit.pdf", cap:"実験回路図", lab:<fig:circuit>, w:90%)
 #pb
-= 実験結果
-図@fig:cv にEDLC充電電圧の比較を示す。2000 rpmにおいても1000 rpmの時と同様の傾向であり、$C=1.0 unit.uF$の時に最大となり、以降は減少傾向をとり$C=100 unit.uF$で最低値となった。
+= 充電特性測定結果
+図@fig:cv にEDLC充電電圧の比較を示す。1000, 2000 rpmにおいて、減速度制御時に比べてコンデンサ容量による変化はみられず、コンデンサなしの場合とほぼ同じ電圧であった。
 
-図@fig:decel 〜@fig:vc に各波形を示す。図@fig:edlc_charged のEDLCの充電電圧は、EDLC両端の電圧から電流による電圧降下を引いたものを100 HzのHPFにかけ、元の波形から引くことで算出している。$C=100 unit.uF$では昇圧区間で充電ほとんどされておらず、そのため充電電圧が低下している。図@fig:vc で$C=100 unit.uF$の電圧が小さく、電流も小さいためである。
+図@fig:n - @fig:vc に各波形を示す。基本的にいずれの波形においても、容量による変化は小さい。ただし回生電流と平滑コンデンサ電流は、容量が大きくなるにつれてリプルが増加した。
 
-また図@fig:torque において、2000 rpmの回生失効直前や$C=100 unit.uF$の昇圧区間において発振や目標値からの逸脱が見られる。いずれもPIパラメータの調整不足によるものだと思われるが、調整しきることができなかった。
 #imgN(("img/plots/1000rpm/plots_energy/ChargingVoltage.png", "img/plots/2000rpm/plots_energy/ChargingVoltage.png"), ([(a) 1000 rpm], [(b) 2000 rpm]), cap:"EDLC充電電圧比較", lab:<fig:cv>, w:7cm)
 
 #let imgn(i, c, l) = {
-	imgN(("img/overray/1000rpm/"+i+".pdf", "img/overray/2000rpm/"+i+".pdf"), ([(a) 1000 rpm], [(b) 2000 rpm]), cap:c, lab:l, w:7.5cm)
+	imgN(("img/overray/1000/"+i+".pdf", "img/overray/2000/"+i+".pdf"), ([(a) 1000 rpm], [(b) 2000 rpm]), cap:c, lab:l, w:7.5cm)
 }
 
-#imgn("D", "減速度", <fig:decel>)
-#imgn("T", "トルク", <fig:torque>)
 #imgn("N", "回転数", <fig:n>)
 #imgn("Iedlc", "EDLC電流", <fig:iedlc>)
 #imgn("Vedlc", "EDLC電圧", <fig:vedlc>)
 #imgn("Vcharged2", "EDLC充電電圧", <fig:edlc_charged>)
-#imgn("mode", "モード変化", <fig:mode>)
 #imgn("Current", "回生電流", <fig:i>)
 #imgn("Ic", "平滑コンデンサ電流", <fig:ic>)
 #imgn("Vc", "平滑コンデンサ電圧", <fig:vc>)
