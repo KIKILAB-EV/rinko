@@ -50,16 +50,16 @@ $<exp:rf1>
 #pb
 #let eg_k = 0.1
 
-#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.1>, w:8.5cm)
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/D.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.1>, w:8.5cm)
 #pb
 #let eg_k = 0.2
 
-#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.2>, w:8.5cm)
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/D.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.2>, w:8.5cm)
 #pb
 #let eg_k = 0.3
 
-#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.3>, w:8.5cm)
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/D.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.3>, w:8.5cm)
 #pb
 #let eg_k = 0.4
 
-#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/Dflt.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/Dflt.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/Dflt.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.4>, w:8.5cm)
+#imgN(("img/"+str(eg_k)+"/Ep"+str(ep)+"/0.6/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/0.8/graph/D.svg","img/"+str(eg_k)+"/Ep"+str(ep)+"/1/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.2/graph/D.svg", "img/"+str(eg_k)+"/Ep"+str(ep)+"/1.4/graph/D.svg"), ([(a) $k'=0.6$] ,[(b) $k'=0.8$],[(c) $k'=1.0$],[(e) $k'=1.2$],[(f) $k'=1.4$]), cap:[$k = #eg_k$ 学習のエージェントの減速度], lab:<img:k0.4>, w:8.5cm)
