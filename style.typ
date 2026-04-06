@@ -207,6 +207,7 @@
 	bibliography-file: none,
 	body,
 ) = {
+	show: cjk-spacer
 	let leading = 0.8em
 	let heading_font(body) = {
 		set text(font: (roman_font, bold_font),size : 12pt)
