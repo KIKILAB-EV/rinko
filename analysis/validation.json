@@ -1,0 +1,15 @@
+{
+  "input_voltage_output_duty_efficiency_rows_verified": 18,
+  "loss_rows": 18,
+  "style_typ_modified": false,
+  "headings": [
+    "実験手順",
+    "結果",
+    "今後の予定"
+  ],
+  "future_body": "blank",
+  "reference": "C:/Users/kenog/Kansai University Dropbox/k661301 k661301/電気機器共有/2026/秋学期/1014/1014_電気自動車.pdf",
+  "circuit_source": "F:/Lab/SEPIC_Spice/research/20261021_edlc_followup/inverting_measurement_circuit.png",
+  "visual_review": "All 5 pages inspected individually",
+  "source_scope": "run13 A/B, corrected run15 only; run14 excluded"
+}

@@ -1,0 +1,7 @@
+{
+  "full_cov_W": -0.025285835037151892,
+  "excluded_points": 10,
+  "total_points": 1000,
+  "masked_cov_W": 0.00581095447776797,
+  "policy": "Diagnostic sensitivity, not adopted correction or measured loss"
+}
