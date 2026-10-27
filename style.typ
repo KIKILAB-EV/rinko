@@ -1,11 +1,10 @@
-#import "bxbibwrite.typ": *
 #import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
 
 #let roman_font = (name: "Times New Roman", covers: regex("[ -~]"))
-#let bold_font = (name: "HGMinchoE", covers: regex("[^ -~]"))
+#let bold_font = (name: "MS Gothic", covers: regex("[^ -~]"))
 #let normal_font = (name: "MS Mincho", covers: regex("[^ -~]"))
 
-#let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2025, content : "研究経過報告") = {
+#let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2025, content : "経過報告") = {
 	
 	let title_font(body) = {
 		set text(font: (roman_font, bold_font), size:14pt) 
@@ -41,8 +40,8 @@
 	else if(wd == "Saturday"){
 		wd = "土"
 	}
-	let data = date.display("[month padding:space]月[day padding:space]日")
-	block[#data (#wd)#h(1em)#id#h(1em)#name]
+	let data = date.display("[year]年[month padding:space]月[day padding:space]日")
+	block[#data#h(1em)#id#h(1em)#name]
 	v(0.5em)
 }
 
@@ -268,7 +267,6 @@
 
 	set math.equation(supplement: [式], numbering: "(1)")
 	
-	show: use-bib-item-ref.with(numbering: "(1)")
 	set par(justify: true, first-line-indent: (amount: 1.0em, all: true), leading: leading, spacing: leading)
 	body
 
