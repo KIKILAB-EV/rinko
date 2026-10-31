@@ -83,7 +83,7 @@
 		#figure(
 			image(path, width: w, height: h),
 			caption: captioon,
-			supplement: [図],
+			supplement: [],
 			numbering: "1",
 			kind: "image",
 			placement: place
@@ -130,7 +130,7 @@
 					align: center+horizon,
 				),
 				caption: captioon,
-				supplement: [図],
+				supplement: [],
 				numbering: "1",
 				kind: "image",
 				placement: place
@@ -163,7 +163,7 @@
 	[#figure(
 		body,
 		caption: captioon,
-		supplement: [表],
+		supplement: [],
 		numbering: "1",
 		kind: "table",
 		placement: place
@@ -223,20 +223,38 @@
 	show figure.where(
 		kind: "table"
 	): it => {
-		place(center+it.placement, [
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-			#it.body
-		], float: true)
+		if it.placement == none {
+			align(center, [
+				#set figure.caption(position: top, separator: none)
+				表#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			])
+		}
+		else{
+			place(center+it.placement, [
+				#set figure.caption(position: top, separator: none)
+				表#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			], float: true)
+		}
 	}
 	show figure.where(
 		kind: "image"
 	): it => {
-		place(center+it.placement, [
-			#it.body
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-		], float: true)
+		if it.placement == none {
+			align(center, [
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				図#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			])
+		}
+		else{
+			place(center+it.placement, [
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				図#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			], float: true)
+		}
 	}
 	
 	show: remove-cjk-break-space
@@ -250,15 +268,17 @@
 
 	counter(page).update(1)
 
-	set heading(numbering: (..args) => {
-		let nums = args.pos()
-		let n = nums.at(2)
-		if nums.len() == 1 { 
-			return numbering("1. ", n)
-		} else {
-			return numbering("1. ", n)
-		}
-	}, level: 3)
+	set heading(numbering: "1.1.1.")
+
+	show heading.where(level: 1) : it => {
+		it 
+	}
+
+	show heading.where(level: 2) : it => {
+		v(-0.5em)
+		it 
+	}
+
 	show heading: it => {
 		heading_font(it)
 		v(0.5em)

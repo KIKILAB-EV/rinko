@@ -10,6 +10,38 @@
   "future_body": "blank",
   "reference": "C:/Users/kenog/Kansai University Dropbox/k661301 k661301/電気機器共有/2026/秋学期/1014/1014_電気自動車.pdf",
   "circuit_source": "F:/Lab/SEPIC_Spice/research/20261021_edlc_followup/inverting_measurement_circuit.png",
-  "visual_review": "All 5 pages inspected individually",
-  "source_scope": "run13 A/B, corrected run15 only; run14 excluded"
+  "visual_review": "Revised final page rendered and visually reviewed; five pages; tables and graphs unchanged",
+  "source_scope": "run13 A/B, corrected run15 only; run14 excluded",
+  "figure_layout": "style.typ imgN, separate single-plot SVGs",
+  "graph_display_width_mm": 70,
+  "graph_aspect_ratio": "4:3",
+  "graph_dimensions": [
+    [
+      "efficiency_5V.svg",
+      "288pt",
+      "216pt"
+    ],
+    [
+      "efficiency_10V.svg",
+      "288pt",
+      "216pt"
+    ],
+    [
+      "inductor_current_ss08.svg",
+      "288pt",
+      "216pt"
+    ],
+    [
+      "inductor_current_ss09.svg",
+      "288pt",
+      "216pt"
+    ]
+  ],
+  "main_contains_block": false,
+  "git_operations_this_revision": false,
+  "loss_components_checked": 72,
+  "loss_percent_denominator": "Unrounded Pin-Pout separately for A/B",
+  "visible_acquisition_numbers": false,
+  "assessment": "Regenerative braking deceleration control; input falls from approximately 60 V; input current target 2-3 A; existing inductor unsuitable for direct adoption",
+  "current_target_side": "Motor-to-converter input regenerative current, 2-3 A; EDLC charging current is not the target (latest user correction)"
 }

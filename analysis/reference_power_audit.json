@@ -1,0 +1,67 @@
+{
+  "plots": 12,
+  "dimensions_in": [
+    4,
+    3
+  ],
+  "power_label": "Terminal instantaneous power, not pure irreversible loss",
+  "MSO_display": "0.2 us bin average of native voltage-current products",
+  "DHO_display": "native exported 2 us samples, AC centered covariance products",
+  "current_display": "Cin AC current, mean removed",
+  "records": [
+    {
+      "condition": 1,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -0.0010101842179180125,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS1.csv"
+    },
+    {
+      "condition": 2,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": 0.0012478905398136016,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS2.csv"
+    },
+    {
+      "condition": 3,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -0.0009891038724009552,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS3.csv"
+    },
+    {
+      "condition": 4,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -0.000246011833921516,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS4.csv"
+    },
+    {
+      "condition": 5,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -9.340734327597383e-05,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS5.csv"
+    },
+    {
+      "condition": 6,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -0.0008470195864960332,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS6.csv"
+    },
+    {
+      "condition": 7,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -0.0016496576136206809,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS7.csv"
+    },
+    {
+      "condition": 8,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": 8.001121188056654e-05,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS8.csv"
+    },
+    {
+      "condition": 9,
+      "MOS_current_offset_A": null,
+      "diode_reverse_current_offset_A": -0.002899586958571669,
+      "DHO_source": "F:\\Lab\\SEPIC_Spice\\research\\20261027_lossA_run13\\_cache\\RigolDS9.csv"
+    }
+  ]
+}

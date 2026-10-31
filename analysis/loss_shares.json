@@ -1,0 +1,797 @@
+{
+  "denominator": "Each measurement state Pin-Pout, unrounded",
+  "values": [
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 4.816725372495335,
+      "share_percent": 30.618877936256077,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 2.49334207496633,
+      "share_percent": 15.849634501203747,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 0.3230112742231021,
+      "share_percent": 2.053312574959614,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 0.14154116421402008,
+      "share_percent": 0.8997464656739375,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 12.277713897414422,
+      "share_percent": 41.86912420079544,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 3.566878070985338,
+      "share_percent": 12.163670061950938,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 0.9173473405269087,
+      "share_percent": 3.1283128159452405,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 0.2538457669376251,
+      "share_percent": 0.8656578930378744,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 23.259017230042204,
+      "share_percent": 46.40337469286302,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 5.190262029888439,
+      "share_percent": 10.354937671913666,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 2.259019393764515,
+      "share_percent": 4.50690252002143,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 0.4291822894157921,
+      "share_percent": 0.8562488427747573,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 39.82753316232261,
+      "share_percent": 47.340831466261605,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 7.361258438697546,
+      "share_percent": 8.749929193597433,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 4.821485510332459,
+      "share_percent": 5.731038676972387,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 0.8697697063200551,
+      "share_percent": 1.0338481400176267,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 72.41032439922516,
+      "share_percent": 52.569991910379485,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 11.014098477717805,
+      "share_percent": 7.996250157387001,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 10.055215940597185,
+      "share_percent": 7.3001001589211105,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 1.427763855391546,
+      "share_percent": 1.036558459730764,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 24.04368536393207,
+      "share_percent": 44.37893389877172,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 7.532855702148392,
+      "share_percent": 13.903862915130002,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 1.362001750859217,
+      "share_percent": 2.513931818541631,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 0.22169240085347586,
+      "share_percent": 0.40919153010108417,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 48.4434183590693,
+      "share_percent": 44.326430794228614,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 13.350430536809094,
+      "share_percent": 12.215837678437397,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 5.181596573645383,
+      "share_percent": 4.741236058588432,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 1.0318773627413873,
+      "share_percent": 0.9441827611887378,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 105.77236220508516,
+      "share_percent": 43.95067680069659,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 27.44013827182905,
+      "share_percent": 11.401963834495914,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 17.002179154599247,
+      "share_percent": 7.06476876712324,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 2.711907493472037,
+      "share_percent": 1.1268555156958238,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "L1_terminal_provisional_W",
+      "power_mW": 248.75159253392275,
+      "share_percent": 45.42027605563553,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "MOS_conditional_W",
+      "power_mW": 77.02375537660208,
+      "share_percent": 14.063991295130778,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "Cin_AC_W",
+      "power_mW": 84.85964424733046,
+      "share_percent": 15.494769012066318,
+      "displayed": true
+    },
+    {
+      "measurement": "A",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "Cout_AC_W",
+      "power_mW": 5.984257782266134,
+      "share_percent": 1.092683016377257,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 6.645057447167073,
+      "share_percent": 40.399720328688716,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "diode_W",
+      "power_mW": 5.370337193743834,
+      "share_percent": 32.649848766996065,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "Cin_W",
+      "power_mW": 0.29728999937364525,
+      "share_percent": 1.8074234762758312,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -2.5
+      ],
+      "component": "Cout_W",
+      "power_mW": 0.09724028964796998,
+      "share_percent": 0.5911883437717255,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 15.265225651907484,
+      "share_percent": 48.24226880485307,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "diode_W",
+      "power_mW": 9.949166735151989,
+      "share_percent": 31.442075404992746,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "Cin_W",
+      "power_mW": 0.7840009568624782,
+      "share_percent": 2.4776564570138273,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -3.75
+      ],
+      "component": "Cout_W",
+      "power_mW": 0.18851399930316667,
+      "share_percent": 0.5957555581056778,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 31.279659717864323,
+      "share_percent": 57.11853114610271,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "diode_W",
+      "power_mW": 13.697053467564388,
+      "share_percent": 25.011639581555123,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "Cin_W",
+      "power_mW": 1.96128413585981,
+      "share_percent": 3.5814222408719503,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -5
+      ],
+      "component": "Cout_W",
+      "power_mW": 0.3799552703429544,
+      "share_percent": 0.6938210689937676,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 61.10824668280362,
+      "share_percent": 63.38130383880804,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "diode_W",
+      "power_mW": 17.42043361850473,
+      "share_percent": 18.0684253945212,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "Cin_W",
+      "power_mW": 4.157982322987528,
+      "share_percent": 4.312647723925407,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -6.25
+      ],
+      "component": "Cout_W",
+      "power_mW": 0.7446931139387558,
+      "share_percent": 0.7723936307029204,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 98.71638640311383,
+      "share_percent": 63.7466919147195,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "diode_W",
+      "power_mW": 20.650015096689387,
+      "share_percent": 13.334869704686053,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "Cin_W",
+      "power_mW": 8.859957092056522,
+      "share_percent": 5.7213698323457445,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        5,
+        -7.5
+      ],
+      "component": "Cout_W",
+      "power_mW": 1.6222879615563566,
+      "share_percent": 1.04760207145335,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 28.633430733108426,
+      "share_percent": 50.436169259569205,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "diode_W",
+      "power_mW": 14.274764192002044,
+      "share_percent": 25.144190007792815,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "Cin_W",
+      "power_mW": 1.2429087411370707,
+      "share_percent": 2.1893134716023623,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -5
+      ],
+      "component": "Cout_W",
+      "power_mW": 0.3335147925424819,
+      "share_percent": 0.5874674496406957,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 65.8788849781652,
+      "share_percent": 53.6810872213203,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "diode_W",
+      "power_mW": 21.42340971475509,
+      "share_percent": 17.45676062758217,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "Cin_W",
+      "power_mW": 4.50390199967338,
+      "share_percent": 3.6699825165662556,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -7.5
+      ],
+      "component": "Cout_W",
+      "power_mW": 1.2073898798294778,
+      "share_percent": 0.9838357384273808,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 131.44441202011063,
+      "share_percent": 52.49099144984509,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "diode_W",
+      "power_mW": 29.255656089489477,
+      "share_percent": 11.682949241068147,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "Cin_W",
+      "power_mW": 15.764679903243099,
+      "share_percent": 6.295464868328311,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -10
+      ],
+      "component": "Cout_W",
+      "power_mW": 0.44726141740478254,
+      "share_percent": 0.17860930621568064,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "L1_provisional_W",
+      "power_mW": 214.32336669022078,
+      "share_percent": 39.69836246463784,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "diode_W",
+      "power_mW": 37.18400050654481,
+      "share_percent": 6.887461469041242,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "Cin_W",
+      "power_mW": 70.92598744252776,
+      "share_percent": 13.137370885581054,
+      "displayed": true
+    },
+    {
+      "measurement": "B",
+      "condition": [
+        10,
+        -12.5
+      ],
+      "component": "Cout_W",
+      "power_mW": -25.130040953945205,
+      "share_percent": -4.654748989562367,
+      "displayed": false
+    }
+  ]
+}
