@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+<style>text{font-family:'Meiryo','MS Gothic',sans-serif;fill:#182738;font-size:23px}.tick{font-size:21px}.value{font-size:26px;font-weight:bold}.legend{font-size:21px}</style>
+<rect width="640" height="480" fill="white"/>
+<path d="M100 351H600 M100 278H600 M100 205H600 M100 132H600 M100 59H600" stroke="#d7e0e7"/>
+<path d="M100 59V351H600" fill="none" stroke="#344557" stroke-width="2"/>
+<text class="tick" x="86" y="358" text-anchor="end">0</text><text class="tick" x="86" y="285" text-anchor="end">0.5</text><text class="tick" x="86" y="212" text-anchor="end">1.0</text><text class="tick" x="86" y="139" text-anchor="end">1.5</text><text class="tick" x="86" y="66" text-anchor="end">2.0</text>
+<text transform="translate(31 207) rotate(-90)" text-anchor="middle">損失 (W)</text>
+<rect x="184" y="92.6" width="114" height="258.4" fill="#a6b5c0"/>
+<rect x="403" y="298.7" width="114" height="52.3" fill="#246399"/>
+<rect x="403" y="276.1" width="114" height="22.6" fill="#a6b5c0"/>
+<text class="value" x="241" y="82" text-anchor="middle">1.77</text><text class="value" x="460" y="265" text-anchor="middle">0.513</text>
+<text x="241" y="383" text-anchor="middle">5 kHz</text><text x="460" y="383" text-anchor="middle">50 kHz</text>
+<rect x="130" y="410" width="21" height="19" fill="#246399"/><text class="legend" x="161" y="428">MOSFET</text>
+<rect x="273" y="410" width="21" height="19" fill="#a6b5c0"/><text class="legend" x="304" y="428">内訳を示していない損失</text>
+</svg>
