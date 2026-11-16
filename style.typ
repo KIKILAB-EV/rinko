@@ -125,7 +125,7 @@
 		v(1em)
 		[
 			#figure(
-				grid(columns: 2, row-gutter: 5mm, column-gutter: 5mm,
+				grid(columns: 2, row-gutter: 0mm, column-gutter: 5mm,
 					..ary.map((i) => i).flatten(),
 					align: center+horizon,
 				),
