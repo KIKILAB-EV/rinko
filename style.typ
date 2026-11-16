@@ -1,10 +1,10 @@
 #import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
 
-#let roman_font = (name: "Times New Roman", covers: regex("[ -~]"))
+#let roman_font = (name: "Century", covers: regex("[ -~]"))
 #let bold_font = (name: "MS Gothic", covers: regex("[^ -~]"))
 #let normal_font = (name: "MS Mincho", covers: regex("[^ -~]"))
 
-#let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2025, content : "経過報告") = {
+#let title(date:datetime.today(), id : "25M6302", name : "荻野 健太", year : 2026, content : "経過報告") = {
 	
 	let title_font(body) = {
 		set text(font: (roman_font, bold_font), size:14pt) 
@@ -12,7 +12,7 @@
 	}
 	set align(center)
 	set text(size:12pt)
-	block[電気機器研究室#h(0.5em)#year 年度#h(0.5em)輪講資料]
+	block[#year 年度#h(0.5em)電気機器研究室#h(0.5em)輪講資料]
 	v(0.5em)
 	block(title_font([電気自動車班#h(0.5em)#content]))
 	v(0.5em)
@@ -83,7 +83,7 @@
 		#figure(
 			image(path, width: w, height: h),
 			caption: captioon,
-			supplement: [図],
+			supplement: [],
 			numbering: "1",
 			kind: "image",
 			placement: place
@@ -130,7 +130,7 @@
 					align: center+horizon,
 				),
 				caption: captioon,
-				supplement: [図],
+				supplement: [],
 				numbering: "1",
 				kind: "image",
 				placement: place
@@ -163,7 +163,7 @@
 	[#figure(
 		body,
 		caption: captioon,
-		supplement: [表],
+		supplement: [],
 		numbering: "1",
 		kind: "table",
 		placement: place
@@ -223,20 +223,38 @@
 	show figure.where(
 		kind: "table"
 	): it => {
-		place(center+it.placement, [
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-			#it.body
-		], float: true)
+		if it.placement == none {
+				[
+					#set figure.caption(position: top, separator: none)
+					表#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+					#it.body
+				]
+		}
+		else{
+			place(center+it.placement, [
+				#set figure.caption(position: top, separator: none)
+				表#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				#it.body
+			], float: true)
+		}
 	}
 	show figure.where(
 		kind: "image"
 	): it => {
-		place(center+it.placement, [
-			#it.body
-			#set figure.caption(position: top, separator: none)
-			#it.supplement#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
-		], float: true)
+		if it.placement == none {
+				[
+					#it.body
+					#set figure.caption(position: top, separator: none)
+					図#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+				]
+		}
+		else{
+			place(center+it.placement, [
+				#it.body
+				#set figure.caption(position: top, separator: none)
+				図#it.counter.display(it.numbering)#h(0.25em)#it.caption.body
+			], float: true)
+		}
 	}
 	
 	show: remove-cjk-break-space
@@ -248,24 +266,13 @@
 
 	set page(paper:"a4", numbering: "1", margin: (top:30mm,bottom:35mm,x:30mm))
 
-	counter(page).update(1)
-
-	set heading(numbering: (..args) => {
-		let nums = args.pos()
-		let n = nums.at(2)
-		if nums.len() == 1 { 
-			return numbering("1. ", n)
-		} else {
-			return numbering("1. ", n)
-		}
-	}, level: 3)
+	set heading(numbering: "1.1.1.")
 	show heading: it => {
 		heading_font(it)
 		v(0.5em)
 	}
-	counter(page).update(1)
 
-	set math.equation(supplement: [式], numbering: "(1)")
+	set math.equation(supplement: [], numbering: "(1)")
 	
 	set par(justify: true, first-line-indent: (amount: 1.0em, all: true), leading: leading, spacing: leading)
 	body
